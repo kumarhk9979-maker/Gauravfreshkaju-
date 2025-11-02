@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="hi">
 <head>
@@ -56,7 +57,6 @@
         <p>Organic • Best Quality • Freshly Packed • FSSAI Certified</p>
       </div>
     </header>
-
     <div class="note">
       <strong>Order Process (Simple):</strong>
       <div class="small" style="margin-top:8px;">
@@ -65,16 +65,13 @@
         3) Delivery: Speed Post / Local courier. Tracking WhatsApp par share kiya jayega.
       </div>
     </div>
-
     <section aria-label="Products" style="margin-top:16px;">
       <h2 style="margin:0 0 10px 0;color:var(--accent-dark)">Products</h2>
-
       <div class="grid">
-
         <!-- 250g -->
         <article class="card" aria-label="250 gram packet">
           <div class="media">
-            https://i.ibb.co/3mbcBk2t/Screenshot-20251102-121611.png
+            <img src="https://i.ibb.co/3mbcBk2t/Screenshot-20251102-121611.png" alt="Gaurav Fresh Kaju - 250g">
           </div>
           <div class="body">
             <div class="small">250 g packet — <strong style="color:var(--accent-dark)">Best Quality</strong></div>
@@ -86,11 +83,10 @@
             <a class="btn" href="#" onclick="orderWhatsApp('250g packet',340);return false;" aria-label="Order 250 gram via WhatsApp">Buy on WhatsApp</a>
           </div>
         </article>
-
         <!-- 250g x2 -->
         <article class="card" aria-label="250 gram x2 packet">
           <div class="media">
-            <img src="https://i.ibb.co/2s7Thb2/kaju-bowl.jpg" alt="Gaurav Fresh Kaju - 250g x2">
+            <img src="https://i.ibb.co/3mbcBk2t/Screenshot-20251102-121611.png" alt="Gaurav Fresh Kaju - 250g x2">
           </div>
           <div class="body">
             <div class="small">250 g × 2 packet — <strong style="color:var(--accent-dark)">Best Quality</strong></div>
@@ -102,10 +98,8 @@
             <a class="btn" href="#" onclick="orderWhatsApp('250g × 2 packet',640);return false;" aria-label="Order 250 gram x2 via WhatsApp">Buy on WhatsApp</a>
           </div>
         </article>
-
       </div>
     </section>
-
     <section class="info" aria-label="Payment and Return">
       <h3 style="margin:0 0 8px 0;color:var(--accent-dark)">Payment & Return</h3>
       <p class="small" style="margin:0;">
@@ -114,20 +108,14 @@
         <strong>Return/Replacement:</strong> Ye food product hai — <strong>return ya replacement available nahi</strong>.
       </p>
     </section>
-
     <section class="info" style="margin-top:12px;">
       <h3 style="margin:0 0 8px 0;color:var(--accent-dark)">Contact</h3>
       <p class="small" style="margin:0;">Click any Buy button to message on WhatsApp. (Your number will remain private on the site.)</p>
     </section>
-
     <footer>© Gaurav Fresh Kaju — Organic • Best Quality Kaju.</footer>
   </div>
-
   <script>
-    // Number parts stored to avoid showing full number on page.
-    // Update parts array if you ever change your WhatsApp number.
-    const parts = ['919942','849146']; // this equals +91 9942849146
-
+    const parts = ['919942','849146']; // +91 9942849146
     function orderWhatsApp(product, price){
       const msg = encodeURIComponent('Namaste! I want to order: '+product+' (₹'+price+').%0A%0AAddress:%0AName:%0AContact mobile:');
       const waUrl = 'https://wa.me/' + parts.join('') + '?text=' + msg;
