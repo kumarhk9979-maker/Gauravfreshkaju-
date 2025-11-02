@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Gaurav Fresh Kaju — Order Online</title>
+  <style>
+    :root{
+      --bg:#eef8f0;
+      --card:#ffffff;
+      --accent:#2f8f57;
+      --accent-dark:#1f6b44;
+      --muted:#51645a;
+      --radius:14px;
+      --shadow: 0 8px 28px rgba(31,107,68,0.08);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", sans-serif;
+      background: linear-gradient(180deg, #f7fbf8 0%, var(--bg) 100%);
+      color:#11221a;
+      -webkit-font-smoothing:antialiased;
+    }
+    .wrap{max-width:980px;margin:22px auto;padding:18px}
+    header{display:flex;gap:12px;align-items:center;padding:14px;border-radius:14px;background:linear-gradient(90deg, rgba(47,143,87,0.06), rgba(47,143,87,0.02));box-shadow:var(--shadow)}
+    .logo{width:68px;height:68px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent-dark));display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:20px;box-shadow:0 8px 20px rgba(31,107,68,0.12)}
+    header h1{margin:0;font-size:20px}
+    header p{margin:4px 0 0;color:var(--muted);font-size:13px}
+    .note{margin-top:14px;padding:12px;border-radius:12px;background:var(--card);border-left:4px solid var(--accent);box-shadow:var(--shadow)}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:16px}
+    .card{background:var(--card);border-radius:12px;overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column}
+    .media{padding:16px;display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg, rgba(47,143,87,0.03), rgba(47,143,87,0.01))}
+    .media img{width:100%;height:220px;object-fit:cover;border-radius:8px}
+    .body{padding:14px;flex:1;display:flex;flex-direction:column}
+    .small{font-size:13px;color:var(--muted)}
+    .price{font-weight:800;color:var(--accent-dark);margin-top:8px;font-size:18px}
+    .meta{display:flex;gap:8px;align-items:center;justify-content:space-between;margin-top:8px}
+    .tag{background:rgba(47,143,87,0.08);color:var(--accent-dark);padding:6px 8px;border-radius:8px;font-weight:600;font-size:13px}
+    .btn{
+      display:inline-block;margin-top:14px;padding:12px 16px;border-radius:10px;background:linear-gradient(90deg,var(--accent),var(--accent-dark));color:#fff;text-decoration:none;font-weight:800;
+      box-shadow:0 12px 28px rgba(47,143,87,0.14);transition:transform .12s ease, box-shadow .12s ease;
+    }
+    .btn:hover{transform:translateY(-4px);box-shadow:0 22px 46px rgba(47,143,87,0.18)}
+    section.info{margin-top:18px;padding:14px;border-radius:12px;background:var(--card);box-shadow:var(--shadow)}
+    footer{margin-top:20px;text-align:center;color:var(--muted);font-size:13px;padding-bottom:30px}
+    @media(max-width:420px){ .media img{height:160px} header{flex-direction:row} }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="logo">GF</div>
+      <div>
+        <h1>Gaurav Fresh Kaju</h1>
+        <p>Organic • Best Quality • Freshly Packed • FSSAI Certified</p>
+      </div>
+    </header>
+
+    <div class="note">
+      <strong>Order Process (Simple):</strong>
+      <div class="small" style="margin-top:8px;">
+        1) Product select karein → “Buy on WhatsApp” button dabayein.<br>
+        2) Address & quantity WhatsApp par bhejein — payment UPI details WhatsApp par milenge.<br>
+        3) Delivery: Speed Post / Local courier. Tracking WhatsApp par share kiya jayega.
+      </div>
+    </div>
+
+    <section aria-label="Products" style="margin-top:16px;">
+      <h2 style="margin:0 0 10px 0;color:var(--accent-dark)">Products</h2>
+
+      <div class="grid">
+
+        <!-- 250g -->
+        <article class="card" aria-label="250 gram packet">
+          <div class="media">
+            <img src="https://i.ibb.co/2s7Thb2/kaju-bowl.jpg" alt="Gaurav Fresh Kaju - 250g">
+          </div>
+          <div class="body">
+            <div class="small">250 g packet — <strong style="color:var(--accent-dark)">Best Quality</strong></div>
+            <div class="price">₹340</div>
+            <div class="meta">
+              <div class="tag">Fresh</div>
+              <div class="small">Hygienically Packed</div>
+            </div>
+            <a class="btn" href="#" onclick="orderWhatsApp('250g packet',340);return false;" aria-label="Order 250 gram via WhatsApp">Buy on WhatsApp</a>
+          </div>
+        </article>
+
+        <!-- 250g x2 -->
+        <article class="card" aria-label="250 gram x2 packet">
+          <div class="media">
+            <img src="https://i.ibb.co/2s7Thb2/kaju-bowl.jpg" alt="Gaurav Fresh Kaju - 250g x2">
+          </div>
+          <div class="body">
+            <div class="small">250 g × 2 packet — <strong style="color:var(--accent-dark)">Best Quality</strong></div>
+            <div class="price">₹640</div>
+            <div class="meta">
+              <div class="tag">Value Pack</div>
+              <div class="small">FSSAI Certified</div>
+            </div>
+            <a class="btn" href="#" onclick="orderWhatsApp('250g × 2 packet',640);return false;" aria-label="Order 250 gram x2 via WhatsApp">Buy on WhatsApp</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="info" aria-label="Payment and Return">
+      <h3 style="margin:0 0 8px 0;color:var(--accent-dark)">Payment & Return</h3>
+      <p class="small" style="margin:0;">
+        <strong>Payment:</strong> UPI only — UPI details WhatsApp par order confirm karne ke baad diye jayenge.<br>
+        <strong>COD:</strong> Not available.<br>
+        <strong>Return/Replacement:</strong> Ye food product hai — <strong>return ya replacement available nahi</strong>.
+      </p>
+    </section>
+
+    <section class="info" style="margin-top:12px;">
+      <h3 style="margin:0 0 8px 0;color:var(--accent-dark)">Contact</h3>
+      <p class="small" style="margin:0;">Click any Buy button to message on WhatsApp. (Your number will remain private on the site.)</p>
+    </section>
+
+    <footer>© Gaurav Fresh Kaju — Organic • Best Quality Kaju.</footer>
+  </div>
+
+  <script>
+    // Number parts stored to avoid showing full number on page.
+    // Update parts array if you ever change your WhatsApp number.
+    const parts = ['919942','849146']; // this equals +91 9942849146
+
+    function orderWhatsApp(product, price){
+      const msg = encodeURIComponent('Namaste! I want to order: '+product+' (₹'+price+').%0A%0AAddress:%0AName:%0AContact mobile:');
+      const waUrl = 'https://wa.me/' + parts.join('') + '?text=' + msg;
+      window.open(waUrl, '_blank');
+    }
+  </script>
+</body>
+</html>
