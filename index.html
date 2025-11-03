@@ -166,14 +166,20 @@ uml>
 
     <footer>© Gaurav Fresh Kaju — Premium Dry Fruits.</footer>
   </div>
-
-  <script>
-    const parts = ['919942','849146']; // +91 9942849146
-    function orderWhatsApp(product, price){
-      const msg = encodeURIComponent('Namaste! I want to order: '+product+' (₹'+price+').%0A%0AAddress:%0AName:%0AContact:');
-      const waUrl = 'https://wa.me/' + parts.join('') + '?text=' + msg;
-      window.open(waUrl, '_blank');
-    }
-  </script>
+<script>
+  const parts = ['919942','849146']; // +91 9942849146
+  function orderWhatsApp(product, price){
+    const msg = encodeURIComponent(
+      "Namaste! I want to order:\n" +
+      product + " (₹" + price + ")\n\n" +
+      "Quantity: ____________\n" +
+      "Name: ____________\n" +
+      "Address: ____________\n" +
+      "Mobile No: ____________"
+    );
+    const waUrl = "https://wa.me/" + parts.join('') + "?text=" + msg;
+    window.open(waUrl, "_blank");
+  }
+</script>
 </body>
 </html
