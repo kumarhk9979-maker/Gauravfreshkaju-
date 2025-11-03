@@ -1,98 +1,139 @@
 <!doctype html>
-<html lang="en">
+<html lang="hi">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>GAURAV STORE — Premium Dry Fruits & Groceries</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Gaurav Fresh Kaju — Order Online</title>
   <style>
-    body {font-family: system-ui, sans-serif; background:#fffdf8; color:#333; margin:0; padding:0;}
-    header {display:flex; align-items:center; padding:10px 20px; background:#fff7e6; border-bottom:1px solid #eee;}
-    .logo {font-size:28px; font-weight:bold; color:#d17f00; margin-right:10px;}
-    h1 {font-size:22px; margin:0;}
-    .banner {background:#fff3cd; padding:10px; text-align:center; font-weight:bold; color:#b35c00;}
-    .note, .policy {background:#fff; margin:15px; padding:15px; border-radius:10px; border:1px solid #f0e0a0;}
-    .products {display:grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap:15px; padding:15px;}
-    .card {background:white; border-radius:12px; padding:10px; text-align:center; box-shadow:0 2px 5px rgba(0,0,0,0.1);}
-    img {width:100%; border-radius:12px;}
-    button {background:#c77a00; color:white; border:none; padding:8px 15px; border-radius:6px; cursor:pointer; margin-top:8px;}
-    button:hover {background:#a86600;}
-    .review-box {background:#fffbe6; border:1px solid #ffe08a; margin:15px; padding:10px; border-radius:10px;}
-    .review {margin-bottom:8px; font-style:italic;}
+    body {
+      font-family: system-ui, sans-serif;
+      background: #fff8f1;
+      margin: 0;
+      color: #333;
+    }
+    header {
+      text-align: center;
+      padding: 1rem;
+    }
+    header img {
+      height: 80px;
+    }
+    .offer {
+      background: #ffcc00;
+      color: #000;
+      font-weight: bold;
+      padding: 0.5rem;
+      border-radius: 10px;
+      display: inline-block;
+      margin-top: 0.5rem;
+    }
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      padding: 1rem;
+    }
+    .card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      width: 250px;
+      text-align: center;
+      padding: 1rem;
+    }
+    .card img {
+      width: 100%;
+      border-radius: 8px;
+    }
+    .price {
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: #000;
+    }
+    .offer-text {
+      font-weight: bold;
+      color: green;
+    }
+    button {
+      background: orange;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      padding: 0.5rem 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 0.5rem;
+    }
+    section {
+      margin: 1.5rem;
+    }
+    .reviews {
+      background: #fff5e6;
+      border-radius: 10px;
+      padding: 1rem;
+    }
+    textarea {
+      width: 100%;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      padding: 0.5rem;
+      margin-top: 0.5rem;
+    }
   </style>
 </head>
 <body>
 
 <header>
-  <div class="logo">🟠</div>
-  <div>
-    <h1>GAURAV STORE</h1>
-    <p>Premium Dry Fruits & Groceries</p>
-  </div>
+  <img src="https://i.ibb.co/NtZrWh4/gauravfresh-logo.png" alt="Gaurav Fresh Kaju Logo">
+  <div class="offer">🎁 ₹50 OFF on First Order!</div>
 </header>
 
-<div class="banner">
-  🎁 Get ₹50 Discount + Surprise Gift on Orders Above ₹1000!
-</div>
-
-<div class="note">
-  <strong>How to Order:</strong><br><br>
-  1. Select your product and click on <strong>“Buy on WhatsApp”</strong>.<br>
-  2. Send quantity, your name, and address on WhatsApp.<br>
-  3. Make payment via UPI (details will be shared on WhatsApp).<br>
-  4. Delivery through <strong>Registered / Normal Post</strong> only.
-</div>
-
-<div class="products">
-  <!-- Kaju -->
+<div class="container">
   <div class="card">
-    <img src="https://i.ibb.co/8DBLRJ8h/Screenshot-20251103-122559.png" alt="Kaju">
+    <img src="https://i.ibb.co/Yp7Fw3h/kaju.jpg" alt="Kaju">
     <h3>Kaju — 250 g</h3>
-    <p><strong>₹340</strong><br><b>Buy 3 packets — get 5% off</b><br>Free delivery under 1000 km</p>
-    <button>Buy on WhatsApp</button>
+    <p class="price">₹340</p>
+    <p class="offer-text">Buy 3 packets — get 5% off</p>
+    <p>Free delivery under 1000 km</p>
+    <button onclick="window.open('https://wa.me/919876543210?text=I%20want%20to%20order%20Kaju%20250g','_blank')">Buy on WhatsApp</button>
   </div>
 
   <div class="card">
-    <img src="https://i.ibb.co/8DBLRJ8h/Screenshot-20251103-122559.png" alt="Kaju 3 Pack">
-    <h3>Kaju — 250 g × 3 (Buy 3)</h3>
-    <p><strong>₹970</strong> (5% applied)<br>Free delivery under 1000 km</p>
-    <button>Buy on WhatsApp</button>
-  </div>
-
-  <!-- Almond (Pista Badam) -->
-  <div class="card">
-    <img src="https://i.ibb.co/Zz8bJbc/almond.jpg" alt="Almond">
+    <img src="https://i.ibb.co/m0yStyd/almond.jpg" alt="Almond">
     <h3>Almond (Pista Badam) — 250 g</h3>
-    <p><strong>₹290</strong><br><b>Buy 3 packets — get 5% off</b><br>Free delivery under 1000 km</p>
-    <button>Buy on WhatsApp</button>
-  </div>
-
-  <div class="card">
-    <img src="https://i.ibb.co/Zz8bJbc/almond.jpg" alt="Almond 3 Pack">
-    <h3>Almond (Pista Badam) — 250 g × 3 (Buy 3)</h3>
-    <p><strong>₹855</strong> (5% applied)<br>Free delivery under 1000 km</p>
-    <button>Buy on WhatsApp</button>
+    <p class="price">₹290</p>
+    <p class="offer-text">Buy 3 packets — get 5% off</p>
+    <p>Free delivery under 1000 km</p>
+    <button onclick="window.open('https://wa.me/919876543210?text=I%20want%20to%20order%20Almond%20250g','_blank')">Buy on WhatsApp</button>
   </div>
 </div>
 
-<div class="review-box">
-  <strong>Customer Reviews:</strong>
-  <div class="review">⭐️⭐️⭐️⭐️⭐️ “Best quality and fresh dry fruits!” – Priya S.</div>
-  <div class="review">⭐️⭐️⭐️⭐️ “Packaging was neat and delivery on time.” – Aman K.</div>
-  <div class="review">⭐️⭐️⭐️⭐️⭐️ “Loved the freshness, will order again!” – Ritu P.</div>
-  <p><em>You can also share your honest review on WhatsApp after delivery 😊</em></p>
-</div>
+<section>
+  <h3>How to Order:</h3>
+  <p>1. Select your product and click on <b>“Buy on WhatsApp”</b>.<br>
+     2. Send quantity, your name, and address on WhatsApp.<br>
+     3. Make payment via UPI (details will be shared on WhatsApp).<br>
+     4. Delivery through <b>Registered / Normal Post</b> only.</p>
+</section>
 
-<div class="policy">
-  <strong>Return & Replacement Policy:</strong>
-  <p>
-    We take great care to ensure every product reaches you in perfect condition.<br>
-    If you receive any <strong>damaged, spoiled, or incorrect item</strong>, please inform us within 
-    <strong>24 hours of delivery</strong> with a photo on WhatsApp.<br>
-    A replacement or refund will be arranged after quick verification.<br>
-    Kindly note that returns are not accepted for opened or partially used items.<br>
-    Your satisfaction is our top priority — thank you for trusting <strong>Gaurav Store</strong>!
-  </p>
-</div>
+<section>
+  <h3>Return & Replacement Policy:</h3>
+  <p>All our products are carefully packed and quality-checked before dispatch.<br>
+  As these are food-grade dry fruits, returns or replacements are not applicable once delivered.<br>
+  However, if you receive a damaged or wrong item, please contact us within 24 hours — we’ll do our best to help.</p>
+</section>
+
+<section class="reviews">
+  <h3>Customer Reviews</h3>
+  <p><b>Ravi:</b> "Kaju quality was excellent and fresh!" ⭐⭐⭐⭐⭐</p>
+  <p><b>Priya:</b> "Timely delivery and nice packing." ⭐⭐⭐⭐</p>
+  <p><b>Rahul:</b> "Loved the almonds, good taste!" ⭐⭐⭐⭐⭐</p>
+
+  <h4>Add Your Review:</h4>
+  <textarea placeholder="Write your review here..."></textarea><br>
+  <button onclick="alert('Thank you for your feedback!')">Submit Review</button>
+</section>
 
 </body>
 </html>
