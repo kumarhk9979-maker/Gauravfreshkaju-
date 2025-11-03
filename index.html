@@ -1,150 +1,136 @@
 <!doctype html>
-<html lang="hi">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Gaurav Fresh — Dry Fruits & Besan</title>
+  <title>GAURAV STORE | Premium Dry Fruits & Groceries</title>
+  <meta name="description" content="GAURAV STORE — Premium Kaju, Pista (Almond mix) and grocery items. Get ₹50 discount on first order. Order on WhatsApp." />
+
   <style>
-    body {
-      font-family: system-ui, sans-serif;
-      background: #fff8f1;
-      margin: 0;
-      color: #333;
+    :root{
+      --bg:#fffaf2;
+      --brand:#d17f00;
+      --brand-dark:#b06500;
+      --muted:#2b1b0f;
+      --card:#fff;
+      --radius:12px;
+      --shadow: 0 8px 26px rgba(215,130,5,0.08);
+      --maxw:980px;
     }
-    header {
-      text-align: center;
-      padding: 1rem;
-    }
-    header img {
-      height: 80px;
-    }
-    .offer {
-      background: #ffcc00;
-      color: #000;
-      font-weight: bold;
-      padding: 0.5rem;
-      border-radius: 10px;
-      display: inline-block;
-      margin-top: 0.5rem;
-    }
-    .container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1rem;
-      padding: 1rem;
-    }
-    .card {
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      width: 250px;
-      text-align: center;
-      padding: 1rem;
-    }
-    .card img {
-      width: 100%;
-      border-radius: 8px;
-    }
-    .price {
-      font-size: 1.1rem;
-      font-weight: bold;
-      color: #000;
-    }
-    .offer-text {
-      font-weight: bold;
-      color: green;
-    }
-    button {
-      background: orange;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      padding: 0.5rem 1rem;
-      font-weight: bold;
-      cursor: pointer;
-      margin-top: 0.5rem;
-    }
-    section {
-      margin: 1.5rem;
-    }
-    .reviews {
-      background: #fff5e6;
-      border-radius: 10px;
-      padding: 1rem;
-    }
-    textarea {
-      width: 100%;
-      border-radius: 6px;
-      border: 1px solid #ccc;
-      padding: 0.5rem;
-      margin-top: 0.5rem;
-    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans",sans-serif;background:linear-gradient(180deg,#fffaf2 0%,var(--bg) 100%);color:var(--muted);}
+    .wrap{max-width:var(--maxw);margin:18px auto;padding:14px}
+    header{display:flex;align-items:center;gap:12px;padding:12px;border-radius:var(--radius);background:linear-gradient(90deg,rgba(209,127,0,0.06),rgba(209,127,0,0.02));box-shadow:var(--shadow)}
+    .logo img{width:68px;height:68px;border-radius:10px;object-fit:cover}
+    header h1{margin:0;font-size:20px}
+    header p{margin:4px 0 0;color:#6a4a1f;font-size:13px}
+    .offer{margin-top:12px;padding:10px;border-radius:10px;background:linear-gradient(90deg,#ffefcf,#fff1d6);color:var(--brand-dark);font-weight:700;text-align:center;box-shadow:var(--shadow)}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin-top:16px}
+    .card{background:var(--card);border-radius:12px;overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column}
+    .media img{width:100%;height:200px;object-fit:cover;border-radius:8px}
+    .body{padding:12px;flex:1;display:flex;flex-direction:column;align-items:center}
+    .small{font-size:13px;color:#555;text-align:center}
+    .price{font-weight:900;color:var(--brand-dark);margin-top:8px;font-size:18px}
+    .bold-note{font-weight:800;color:#000;margin-top:6px}
+    .btn{display:inline-block;margin-top:12px;padding:10px 14px;border-radius:10px;background:linear-gradient(90deg,var(--brand),var(--brand-dark));color:#fff;text-decoration:none;font-weight:800;box-shadow:0 10px 26px rgba(209,127,0,0.12)}
+    .info{margin-top:18px;padding:12px;border-radius:10px;background:var(--card);box-shadow:var(--shadow)}
+    footer{margin-top:20px;padding:14px;text-align:center;color:#5b3f14;font-size:13px}
+    @media(max-width:420px){.media img{height:140px}}
   </style>
 </head>
 <body>
+  <div class="wrap">
+    <header>
+      <div class="logo"><img src="https://i.ibb.co/3mbcBk2t/Screenshot-20251102-121611.png" alt="logo"></div>
+      <div>
+        <h1>GAURAV STORE</h1>
+        <p>Premium Dry Fruits & Groceries</p>
+      </div>
+    </header>
 
-<header>
-  <img src="https://i.ibb.co/NtZrWh4/gauravfresh-logo.png" alt="Gaurav Fresh Logo">
-  <div class="offer">🎁 ₹50 OFF on First Order!</div>
-</header>
+    <div class="offer"><strong>🎁 ₹50 OFF on First Order!</strong></div>
 
-<div class="container">
-  <!-- 🟡 Besan -->
-  <div class="card">
-    <img src="https://i.ibb.co/VjcZgkN/besan.jpg" alt="Rakesh Chana Dal Besan">
-    <h3>Rakesh Chana Dal Besan — 1 kg</h3>
-    <p class="price">₹90</p>
-    <p>Delivery charges depend on location</p>
-    <button onclick="window.open('https://wa.me/919876543210?text=I%20want%20to%20order%20Besan%201kg','_blank')">Buy on WhatsApp</button>
+    <section aria-label="Products">
+      <div class="grid">
+        <!-- Besan -->
+        <article class="card">
+          <div class="media"><img src="https://i.ibb.co/8DBLRJ8h/Screenshot-20251103-122559.png" alt="Besan"></div>
+          <div class="body">
+            <div class="small">Rakesh Chana Dal Besan — 1 kg</div>
+            <div class="price">₹90</div>
+            <div class="small">Delivery charges depend on location</div>
+            <a class="btn" href="#" onclick="orderWhatsApp('Rakesh Chana Dal Besan 1kg',90)">Buy on WhatsApp</a>
+          </div>
+        </article>
+
+        <!-- Kaju -->
+        <article class="card">
+          <div class="media"><img src="https://i.ibb.co/3mbcBk2t/Screenshot-20251102-121611.png" alt="Kaju"></div>
+          <div class="body">
+            <div class="small">Kaju — 250 g</div>
+            <div class="price">₹340</div>
+            <div class="bold-note">Buy 3 packets — get 5% off</div>
+            <div class="small">Free delivery under 1000 km</div>
+            <a class="btn" href="#" onclick="orderWhatsApp('Kaju 250g',340)">Buy on WhatsApp</a>
+          </div>
+        </article>
+
+        <!-- Almond -->
+        <article class="card">
+          <div class="media"><img src="https://i.ibb.co/SGpdhtP/Screenshot-20251102-232811.png" alt="Almond"></div>
+          <div class="body">
+            <div class="small">Almond (Pista Badam) — 250 g</div>
+            <div class="price">₹290</div>
+            <div class="bold-note">Buy 3 packets — get 5% off</div>
+            <div class="small">Free delivery under 1000 km</div>
+            <a class="btn" href="#" onclick="orderWhatsApp('Almond (Pista Badam) 250g',290)">Buy on WhatsApp</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- How to Order -->
+    <section class="info">
+      <h3>How to Order:</h3>
+      <p>
+        1. Select your desired product and click on <strong>“Buy on WhatsApp”</strong>.<br>
+        2. Send your quantity, name, and address on WhatsApp.<br>
+        3. Make payment securely via UPI (details will be shared on WhatsApp).<br>
+        4. Delivery through <strong>Registered / Normal Post only</strong>.
+      </p>
+    </section>
+
+    <!-- Return Policy -->
+    <section class="info">
+      <h3>Return & Replacement Policy:</h3>
+      <p style="font-size:14px;line-height:1.5;">
+        All our products are packed with utmost care and undergo strict quality checks before dispatch.  
+        Since these are food-grade dry fruits and groceries, <strong>returns or replacements are not applicable once delivered</strong>.  
+        However, in the rare case that you receive a damaged or incorrect item, please contact us within <strong>24 hours</strong> of delivery —  
+        our team will be happy to assist you promptly and fairly.
+      </p>
+    </section>
+
+    <footer>
+      Delivery through Registered/Normal Post only.<br>
+      © 2025 GAURAV STORE
+    </footer>
   </div>
 
-  <!-- 🟢 Kaju -->
-  <div class="card">
-    <img src="https://i.ibb.co/Yp7Fw3h/kaju.jpg" alt="Kaju">
-    <h3>Kaju — 250 g</h3>
-    <p class="price">₹340</p>
-    <p class="offer-text">Buy 3 packets — get 5% off</p>
-    <p>Free delivery under 1000 km</p>
-    <button onclick="window.open('https://wa.me/919876543210?text=I%20want%20to%20order%20Kaju%20250g','_blank')">Buy on WhatsApp</button>
-  </div>
-
-  <!-- 🟤 Almond -->
-  <div class="card">
-    <img src="https://i.ibb.co/m0yStyd/almond.jpg" alt="Almond">
-    <h3>Almond (Pista Badam) — 250 g</h3>
-    <p class="price">₹290</p>
-    <p class="offer-text">Buy 3 packets — get 5% off</p>
-    <p>Free delivery under 1000 km</p>
-    <button onclick="window.open('https://wa.me/919876543210?text=I%20want%20to%20order%20Almond%20250g','_blank')">Buy on WhatsApp</button>
-  </div>
-</div>
-
-<section>
-  <h3>How to Order:</h3>
-  <p>1. Select your product and click on <b>“Buy on WhatsApp”</b>.<br>
-     2. Send quantity, your name, and address on WhatsApp.<br>
-     3. Make payment via UPI (details will be shared on WhatsApp).<br>
-     4. Delivery through <b>Registered / Normal Post</b> only.</p>
-</section>
-
-<section>
-  <h3>Return & Replacement Policy:</h3>
-  <p>All our products are carefully packed and quality-checked before dispatch.<br>
-  Since these are food-grade dry fruits and ingredients, returns or replacements are not available once delivered.<br>
-  However, if you receive a damaged or wrong item, kindly inform us within 24 hours — we’ll be happy to assist.</p>
-</section>
-
-<section class="reviews">
-  <h3>Customer Reviews</h3>
-  <p><b>Ravi:</b> "Kaju quality was excellent and fresh!" ⭐⭐⭐⭐⭐</p>
-  <p><b>Priya:</b> "Timely delivery and nice packing." ⭐⭐⭐⭐</p>
-  <p><b>Rahul:</b> "Loved the almonds, good taste!" ⭐⭐⭐⭐⭐</p>
-
-  <h4>Add Your Review:</h4>
-  <textarea placeholder="Write your review here..."></textarea><br>
-  <button onclick="alert('Thank you for your feedback!')">Submit Review</button>
-</section>
-
+  <script>
+    const parts = ['919942','849146']; // +91 9942849146
+    function orderWhatsApp(product, price){
+      const msg = encodeURIComponent(
+        'Namaste! I want to order:\n' +
+        product + ' (₹' + price + ')\n\n' +
+        'Quantity: ___________\n' +
+        'Name: ___________\n' +
+        'Address: ___________\n' +
+        'Mobile No: ___________'
+      );
+      const waUrl = 'https://wa.me/' + parts.join('') + '?text=' + msg;
+      window.open(waUrl, '_blank');
+    }
+  </script>
 </body>
 </html>
