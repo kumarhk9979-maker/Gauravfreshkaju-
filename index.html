@@ -1,183 +1,276 @@
-<!doctype html>
+  <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="google-site-verification" content="iBJh_cAHkQBIxjozI7xL-Wjohzvp1deaG5Ak7PUWsYo" />
-
   <title>GAURAV STORE | Premium Dry Fruits & Groceries</title>
 
+  <meta name="description" content="GAURAV STORE — Premium Kaju, Pista (Almond mix) and grocery items. Get ₹50 discount + surprise gift on orders above ₹1000. Order on WhatsApp." />
+  <meta name="keywords" content="GAURAV STORE, dry fruits, kaju, pista, besan, buy dry fruits online" />
+  <meta name="author" content="Gaurav Kumar" />
+  <meta property="og:title" content="GAURAV STORE | Premium Dry Fruits & Groceries" />
+  <meta property="og:description" content="Get ₹50 Discount + Surprise Gift on Orders Above ₹1000!" />
+  <meta property="og:image" content="https://i.ibb.co/3mbcBk2t/Screenshot-20251102-121611.png" />
+  <meta property="og:type" content="website" />
+
   <style>
-    :root {
-      --brand: #d17f00; /* Orange gold theme */
-      --muted: #444;
-      --bg: #fffaf2;
+    :root{
+      --bg:#fffaf2;
+      --brand:#d17f00; /* orange-gold */
+      --brand-dark:#b06500;
+      --muted:#2b1b0f;
+      --card:#fff;
+      --radius:12px;
+      --shadow: 0 8px 26px rgba(215,130,5,0.08);
+      --maxw:980px;
     }
-    body {
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-      background: var(--bg);
-      margin: 0;
-      color: var(--muted);
-      text-align: center;
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans",sans-serif;
+      background:linear-gradient(180deg,#fffaf2 0%,var(--bg) 100%);
+      color:var(--muted);
+      -webkit-font-smoothing:antialiased;
     }
-    header {
-      background: var(--brand);
-      color: white;
-      padding: 1rem;
-      font-size: 1.5rem;
-      font-weight: bold;
-    }
-    .gift-banner {
-      background: #ffe6b3;
-      padding: 0.5rem;
-      color: #663300;
-      font-weight: 600;
-    }
-    .products {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 1rem;
-      padding: 1rem;
-    }
-    .card {
-      background: white;
-      border-radius: 1rem;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      padding: 1rem;
-    }
-    img {
-      width: 100%;
-      border-radius: 0.5rem;
-    }
-    h3 { color: var(--brand); margin-bottom: 0.25rem; }
-    p { margin: 0.25rem 0; }
-    .price { font-weight: bold; font-size: 1.1rem; color: #333; }
-    .order-btn {
-      display: inline-block;
-      margin-top: 0.5rem;
-      background: var(--brand);
-      color: white;
-      padding: 0.5rem 1rem;
-      border-radius: 0.5rem;
-      text-decoration: none;
-      font-weight: 600;
-    }
-    .review-section {
-      margin-top: 2rem;
-      padding: 1rem;
-      background: #fff4e0;
-      border-radius: 1rem;
-      width: 90%;
-      max-width: 500px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .review-list {
-      text-align: left;
-      margin-bottom: 1rem;
-    }
-    .review-list p {
-      background: white;
-      padding: 0.5rem;
-      border-radius: 0.5rem;
-      margin: 0.3rem 0;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-    }
-    input, button {
-      padding: 0.5rem;
-      border-radius: 0.5rem;
-      border: 1px solid #ccc;
-      width: 80%;
-      margin-bottom: 0.5rem;
-    }
-    button {
-      background: var(--brand);
-      color: white;
-      border: none;
-      cursor: pointer;
-    }
-    footer {
-      background: var(--brand);
-      color: white;
-      padding: 1rem;
-      margin-top: 1rem;
-      font-size: 0.9rem;
-    }
+    .wrap{max-width:var(--maxw);margin:18px auto;padding:14px}
+    header{display:flex;align-items:center;gap:12px;padding:12px;border-radius:var(--radius);background:linear-gradient(90deg,rgba(209,127,0,0.06),rgba(209,127,0,0.02));box-shadow:var(--shadow)}
+    .logo{width:68px;height:68px;border-radius:10px;background:linear-gradient(135deg,var(--brand),var(--brand-dark));display:flex;align-items:center;justify-content:center;color:#fff;font-weight:900;font-size:22px;box-shadow:0 8px 20px rgba(209,127,0,0.12)}
+    header h1{margin:0;font-size:20px}
+    header p{margin:4px 0 0;color:#6a4a1f;font-size:13px}
+    .offer{margin-top:12px;padding:10px;border-radius:10px;background:linear-gradient(90deg,#ffefcf,#fff1d6);color:var(--brand-dark);font-weight:700;text-align:center;box-shadow:var(--shadow)}
+    .note{margin-top:12px;padding:12px;border-radius:10px;background:var(--card);border-left:4px solid var(--brand);box-shadow:var(--shadow);font-size:14px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin-top:16px}
+    .card{background:var(--card);border-radius:12px;overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column}
+    .media{padding:12px;display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg,rgba(209,127,0,0.03),rgba(209,127,0,0.01))}
+    .media img{width:100%;height:200px;object-fit:cover;border-radius:8px}
+    .body{padding:12px;flex:1;display:flex;flex-direction:column;align-items:center}
+    .small{font-size:13px;color:#555;text-align:center}
+    .price{font-weight:900;color:var(--brand-dark);margin-top:8px;font-size:18px}
+    .bold-note{font-weight:800;color:#000;margin-top:6px}
+    .tag{background:rgba(209,127,0,0.08);color:var(--brand-dark);padding:6px 8px;border-radius:8px;font-weight:700;font-size:13px}
+    .btn{display:inline-block;margin-top:12px;padding:10px 14px;border-radius:10px;background:linear-gradient(90deg,var(--brand),var(--brand-dark));color:#fff;text-decoration:none;font-weight:800;box-shadow:0 10px 26px rgba(209,127,0,0.12)}
+    .btn:hover{transform:translateY(-3px)}
+    .info{margin-top:16px;padding:12px;border-radius:10px;background:var(--card);box-shadow:var(--shadow)}
+    .reviews {margin-top:18px;text-align:left}
+    .review-item{background:#fff;padding:8px;border-radius:8px;margin-bottom:8px;box-shadow:0 2px 6px rgba(0,0,0,0.05)}
+    .stars{color:#e59600;font-weight:800}
+    input[type="text"]{width:100%;padding:8px;border-radius:8px;border:1px solid #ddd;margin-bottom:8px}
+    select{padding:8px;border-radius:8px;border:1px solid #ddd;margin-bottom:8px}
+    button.submit{background:var(--brand);color:#fff;padding:8px 12px;border-radius:8px;border:none;font-weight:700;cursor:pointer}
+    footer{margin-top:20px;padding:14px;text-align:center;color:#5b3f14;font-size:13px}
+    @media(max-width:420px){.media img{height:140px}}
   </style>
 </head>
-
 <body>
-  <header>GAURAV STORE</header>
-  <div class="gift-banner">
-    🎁 Buy products worth ₹1000 or more & get ₹50 discount or another special gift!
+  <div class="wrap">
+    <header>
+      <div class="logo"><img src="https://i.ibb.co/3mbcBk2t/Screenshot-20251102-121611.png" alt="logo" style="width:58px;height:58px;border-radius:8px;object-fit:cover"></div>
+      <div>
+        <h1>GAURAV STORE</h1>
+        <p>Premium Dry Fruits & Groceries</p>
+      </div>
+    </header>
+
+    <div class="offer"><strong>🎁 Get ₹50 Discount + Surprise Gift on Orders Above ₹1000!</strong></div>
+
+    <div class="note">
+      <strong>How to order:</strong>
+      <div style="margin-top:6px">
+        1) Tap a product → Click “Buy on WhatsApp”. &nbsp;
+        2) Send quantity, name & address. &nbsp;
+        3) Payment via UPI (details on WhatsApp). &nbsp;
+        4) Delivery through <strong>Registered/Normal Post only</strong>.
+      </div>
+    </div>
+
+    <section aria-label="Products">
+      <div class="grid">
+
+        <!-- Kaju single -->
+        <article class="card">
+          <div class="media"><img src="https://i.ibb.co/3mbcBk2t/Screenshot-20251102-121611.png" alt="Kaju 250g"></div>
+          <div class="body">
+            <div class="small">Kaju — 250 g</div>
+            <div class="price">₹340</div>
+            <div class="bold-note">Buy 3 packets — get 5% off</div>
+            <div class="small" style="margin-top:6px">Free delivery under 1000 km</div>
+            <a class="btn" href="#" onclick="orderWhatsApp('Kaju 250g',340)">Buy on WhatsApp</a>
+          </div>
+        </article>
+
+        <!-- Kaju 3 pack (Buy 3) -->
+        <article class="card">
+          <div class="media"><img src="https://i.ibb.co/3mbcBk2t/Screenshot-20251102-121611.png" alt="Kaju 3x250g"></div>
+          <div class="body">
+            <div class="small">Kaju — 250 g × 3 (Buy 3)</div>
+            <div class="price">₹970 <span style="font-size:12px;color:#666"> (5% applied)</span></div>
+            <div class="small">Free delivery under 1000 km</div>
+            <a class="btn" href="#" onclick="orderWhatsApp('Kaju 3x250g Pack',970)">Buy on WhatsApp</a>
+          </div>
+        </article>
+
+        <!-- Pista (Almond) single -->
+        <article class="card">
+          <div class="media"><img src="https://i.ibb.co/SGpdhtP/Screenshot-20251102-232811.png" alt="Pista 250g"></div>
+          <div class="body">
+            <div class="small">Pista (Almond Mix) — 250 g</div>
+            <div class="price">₹290</div>
+            <div class="bold-note">Buy 3 packets — get 5% off</div>
+            <div class="small" style="margin-top:6px">Free delivery under 1000 km</div>
+            <a class="btn" href="#" onclick="orderWhatsApp('Pista Almond 250g',290)">Buy on WhatsApp</a>
+          </div>
+        </article>
+
+        <!-- Pista 3 pack -->
+        <article class="card">
+          <div class="media"><img src="https://i.ibb.co/SGpdhtP/Screenshot-20251102-232811.png" alt="Pista 3x250g"></div>
+          <div class="body">
+            <div class="small">Pista — 250 g × 3 (Buy 3)</div>
+            <div class="price">₹855 <span style="font-size:12px;color:#666">(5% applied)</span></div>
+            <div class="small">Free delivery under 1000 km</div>
+            <a class="btn" href="#" onclick="orderWhatsApp('Pista 3x250g Pack',855)">Buy on WhatsApp</a>
+          </div>
+        </article>
+
+        <!-- Besan -->
+        <article class="card">
+          <div class="media"><img src="https://i.ibb.co/8DBLRJ8h/Screenshot-20251103-122559.png" alt="Besan 250g"></div>
+          <div class="body">
+            <div class="small">Besan — 250 g</div>
+            <div class="price">₹45</div>
+            <div class="small" style="margin-top:6px">Delivery charges depend on location</div>
+            <a class="btn" href="#" onclick="orderWhatsApp('Besan 250g',45)">Buy on WhatsApp</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Reviews & Rating -->
+    <section class="info" id="reviewsSection">
+      <h3 style="margin:0 0 8px 0">Customer Reviews <span id="avgStars" style="margin-left:10px;color:#e59600;font-weight:800"></span></h3>
+      <div class="reviews" id="reviewList" aria-live="polite">
+        <!-- reviews injected here -->
+      </div>
+
+      <div style="margin-top:10px;text-align:left;max-width:560px;margin-left:auto;margin-right:auto">
+        <label for="ratingSelect"><strong>Your rating:</strong></label><br>
+        <select id="ratingSelect" aria-label="Rating">
+          <option value="5">5 — Excellent</option>
+          <option value="4">4 — Very Good</option>
+          <option value="3">3 — Good</option>
+          <option value="2">2 — Fair</option>
+          <option value="1">1 — Poor</option>
+        </select>
+        <br>
+        <input id="reviewInput" type="text" placeholder="Write your review..." aria-label="Write your review" />
+        <br>
+        <button class="submit" onclick="submitReview()">Submit Review</button>
+      </div>
+    </section>
+
+    <section class="info" style="margin-top:12px">
+      <h3 style="margin:0 0 8px 0">Payment & Return Policy</h3>
+      <p class="small" style="margin:0">
+        <strong>Payment:</strong> UPI only — details shared on WhatsApp after order confirmation.<br>
+        <strong>Return/Replacement:</strong> As these are food products, returns or replacements are <strong>not possible</strong> for hygiene reasons.
+      </p>
+    </section>
+
+    <footer>
+      Delivery through Registered/Normal Post only.<br>
+      © 2025 GAURAV STORE
+    </footer>
   </div>
 
-  <section class="products">
-    <!-- Kaju -->
-    <div class="card">
-      <img src="https://i.ibb.co/3mbcBk2t/Screenshot-20251102-121611.png" alt="Kaju">
-      <h3>Premium Kaju (Cashew)</h3>
-      <p>250g – ₹290</p>
-      <p>500g – ₹560 (5% off)</p>
-      <p class="price">Free Delivery up to 1000 km</p>
-      <a class="order-btn" href="https://wa.me/918210000000?text=Namaste!%20I%20want%20to%20order%20Kaju%20(Cashew)%0AQuantity:%20___%0AName:%20___%0AAddress:%20___%0AMobile:%20___">
-        Order on WhatsApp
-      </a>
-    </div>
-
-    <!-- Almond -->
-    <div class="card">
-      <img src="https://i.ibb.co/SGpdhtP/Screenshot-20251102-232811.png" alt="Almond">
-      <h3>Premium Almond (Pista Badam)</h3>
-      <p>250g – ₹290</p>
-      <p>500g – ₹560 (5% off)</p>
-      <p class="price">Free Delivery up to 1000 km</p>
-      <a class="order-btn" href="https://wa.me/918210000000?text=Namaste!%20I%20want%20to%20order%20Almond%20(Pista%20Badam)%0AQuantity:%20___%0AName:%20___%0AAddress:%20___%0AMobile:%20___">
-        Order on WhatsApp
-      </a>
-    </div>
-
-    <!-- Besan -->
-    <div class="card">
-      <img src="https://i.ibb.co/8DBLRJ8h/Screenshot-20251103-122559.png" alt="Besan">
-      <h3>Gram Flour (Besan)</h3>
-      <p>250g – ₹45</p>
-      <p class="price">Delivery charges depend on location</p>
-      <a class="order-btn" href="https://wa.me/918210000000?text=Namaste!%20I%20want%20to%20order%20Besan%0AQuantity:%20___%0AName:%20___%0AAddress:%20___%0AMobile:%20___">
-        Order on WhatsApp
-      </a>
-    </div>
-  </section>
-
-  <!-- Review Section -->
-  <section class="review-section">
-    <h2>Customer Reviews</h2>
-    <div class="review-list" id="reviews">
-      <p>⭐️⭐️⭐️⭐️⭐️ “Very fresh and tasty dry fruits!” – Rohan</p>
-      <p>⭐️⭐️⭐️⭐️ “Fast delivery and good packaging.” – Sneha</p>
-      <p>⭐️⭐️⭐️⭐️⭐️ “Loved the quality of almonds!” – Priya</p>
-    </div>
-    <input type="text" id="reviewInput" placeholder="Write your review..." />
-    <button onclick="addReview()">Submit Review</button>
-  </section>
-
-  <footer>
-    Delivery through Registered/Normal Post only.<br>
-    No return or replacement possible.<br>
-    © 2025 GAURAV STORE. All Rights Reserved.
-  </footer>
-
   <script>
-    function addReview() {
-      const input = document.getElementById("reviewInput");
-      const text = input.value.trim();
-      if (text) {
-        const div = document.createElement("p");
-        div.textContent = "⭐️⭐️⭐️⭐️⭐️ " + text;
-        document.getElementById("reviews").appendChild(div);
-        input.value = "";
+    // WhatsApp number parts (hidden)
+    const parts = ['919942','849146']; // +91 9942849146
+
+    function orderWhatsApp(product, price){
+      const msg = encodeURIComponent(
+        'Namaste! I want to order:\n' +
+        product + ' (₹' + price + ')\n\n' +
+        'Quantity: ___________\n' +
+        'Name: ___________\n' +
+        'Address: ___________\n' +
+        'Mobile No: ___________'
+      );
+      const waUrl = 'https://wa.me/' + parts.join('') + '?text=' + msg;
+      window.open(waUrl, '_blank');
+    }
+
+    // --- Reviews + Ratings (localStorage) ---
+    const STORAGE_KEY = 'gaurav_store_reviews_v2';
+
+    // default demo reviews (used if storage empty)
+    const demo = [
+      {name:'Rohan', text:'Very fresh and tasty dry fruits!', rating:5},
+      {name:'Sneha', text:'Fast delivery and good packaging.', rating:4},
+      {name:'Priya', text:'Loved the quality of almonds!', rating:5}
+    ];
+
+    function loadReviews(){
+      const raw = localStorage.getItem(STORAGE_KEY);
+      if(!raw){
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(demo));
+        return demo.slice();
+      }
+      try{
+        return JSON.parse(raw);
+      }catch(e){
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(demo));
+        return demo.slice();
       }
     }
+
+    function saveReviews(list){
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(list));
+    }
+
+    function renderReviews(){
+      const list = loadReviews();
+      const container = document.getElementById('reviewList');
+      container.innerHTML = '';
+      let sum = 0;
+      list.forEach(r => {
+        sum += Number(r.rating||0);
+        const d = document.createElement('div');
+        d.className = 'review-item';
+        const stars = '★'.repeat(r.rating) + '☆'.repeat(5 - r.rating);
+        d.innerHTML = '<div class="stars">'+stars+'</div><div style="margin-top:6px">'+escapeHtml(r.text)+'</div><div style="margin-top:6px;font-size:12px;color:#666">- '+escapeHtml(r.name||'Customer')+'</div>';
+        container.appendChild(d);
+      });
+      const avg = list.length ? (sum / list.length) : 0;
+      const avgRounded = Math.round(avg);
+      const avgStars = '★'.repeat(avgRounded) + '☆'.repeat(5 - avgRounded);
+      document.getElementById('avgStars').textContent = avgStars + ' (' + avg.toFixed(1) + ')';
+    }
+
+    function submitReview(){
+      const input = document.getElementById('reviewInput');
+      const rating = Number(document.getElementById('ratingSelect').value);
+      const text = input.value.trim();
+      if(!text){
+        alert('Please write a short review first.');
+        return;
+      }
+      const name = prompt('Enter your name (optional):') || 'Customer';
+      const list = loadReviews();
+      list.unshift({name: name, text: text, rating: rating});
+      if(list.length > 200) list.length = 200;
+      saveReviews(list);
+      input.value = '';
+      renderReviews();
+    }
+
+    function escapeHtml(str){
+      return String(str).replace(/[&<>"']/g, function(m){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]; });
+    }
+
+    // initial render
+    renderReviews();
   </script>
 </body>
 </html>
