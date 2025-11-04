@@ -118,23 +118,26 @@
   </div>
 </div>
 
-    <!-- 🔍 Search Bar -->
+    <!-- 🔍 Search Section -->
 <div style="text-align:center; margin: 20px;">
-  <input type="text" id="searchInput" placeholder="Search for products..." 
-         style="padding:10px; width:80%; max-width:400px; border-radius:10px; border:1px solid #ccc;">
+  <label for="searchInput" style="font-weight:600; font-size:16px;">Search 🔎</label><br>
+  <input type="text" id="searchInput" placeholder="Type to search products..." 
+         style="padding:10px; width:80%; max-width:400px; margin-top:8px; border-radius:10px; border:1px solid #ccc;">
 </div>
 
 <script>
-  // Simple Product Search Filter
-  document.getElementById('searchInput').addEventListener('keyup', function() {
-    let filter = this.value.toLowerCase();
-    let products = document.querySelectorAll('.product-card');
-    products.forEach(function(card) {
-      let text = card.textContent.toLowerCase();
-      card.style.display = text.includes(filter) ? 'block' : 'none';
+  // 🧠 Search Filter Logic
+  document.getElementById('searchInput').addEventListener('input', function() {
+    const filter = this.value.toLowerCase();
+    const products = document.querySelectorAll('.product-card');
+    products.forEach(product => {
+      const text = product.innerText.toLowerCase();
+      product.style.display = text.includes(filter) ? '' : 'none';
     });
   });
 </script>
+
+    
   
 </section>
 
