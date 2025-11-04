@@ -117,7 +117,6 @@
     
   </div>
 </div>
-
 <!-- 🔍 Search Bar -->
 <div style="text-align:center; margin:20px 0;">
   <label for="searchInput" style="font-weight:600;">Search 🔍</label><br>
@@ -137,24 +136,32 @@
 <script>
 function searchProducts() {
   const input = document.getElementById("searchInput").value.toLowerCase();
+  const container = document.querySelector("[aria-label='Products'] .grid, .products-grid, .cards"); 
   const products = document.getElementsByClassName("card");
   let found = false;
+  let matches = [];
 
-  for (let i = 0; i < products.length; i++) {
-    const item = products[i];
-    const text = item.textContent.toLowerCase();
+  // Clear container before refilling (to re-sort visible ones)
+  for (let product of products) {
+    const text = product.textContent.toLowerCase();
     if (text.includes(input) || input === "") {
-      item.style.display = "block";
+      matches.push(product);
+      product.style.display = "block";
       found = true;
     } else {
-      item.style.display = "none";
+      product.style.display = "none";
     }
   }
 
-  // Show message if nothing matches
+  // Bring matched items to top (prevents bottom-fixed product)
+  if (container && matches.length > 0) {
+    matches.forEach(p => container.appendChild(p));
+  }
+
   document.getElementById("noResults").style.display = found ? "none" : "block";
 }
 </script>
+    
 
     
   
