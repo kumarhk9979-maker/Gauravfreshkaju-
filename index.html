@@ -118,75 +118,43 @@
   </div>
 </div>
 
-<!-- ✨ Updated Search CSS (use with existing input id="searchInput") -->
-<style>
-/* keep nice animation but target .card */
-.card {
-  transition: all 0.28s ease;
-  opacity: 1;
-}
-.card.hidden {
-  opacity: 0;
-  transform: scale(0.97);
-  pointer-events: none;
-  height: 0;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-}
+<!-- 🔍 Search Bar -->
+<div style="text-align:center; margin:20px 0;">
+  <label for="searchInput" style="font-weight:600;">Search 🔍</label><br>
+  <input
+    type="text"
+    id="searchInput"
+    placeholder="Search for products..."
+    onkeyup="searchProducts()"
+    style="margin-top:8px; padding:8px 12px; width:80%; max-width:400px; border:2px solid #ccc; border-radius:8px; font-size:16px;"
+  >
+  <div id="noResults" style="display:none; margin-top:10px; color:#b5651d; font-weight:600;">
+    No products found. Try another search.
+  </div>
+</div>
 
-/* no-results message */
-#noResults {
-  display: none;
-  text-align: center;
-  margin-top: 12px;
-  color: #b65b00;
-  font-weight:700;
-}
-</style>
-
-<!-- 🔎 Search filter + no-results -->
+<!-- 🔍 Search Script -->
 <script>
 function searchProducts() {
-  const input = document.getElementById("searchInput");
-  if(!input) return; // safety
-  const q = input.value.trim().toLowerCase();
-  const products = document.getElementsByClassName("card"); // <- use "card" (your HTML)
-  let visibleCount = 0;
+  const input = document.getElementById("searchInput").value.toLowerCase();
+  const products = document.getElementsByClassName("card");
+  let found = false;
 
   for (let i = 0; i < products.length; i++) {
     const item = products[i];
-    // prefer innerText (gives visible text) but fallback to textContent
-    const text = (item.innerText || item.textContent || "").toLowerCase();
-
-    if (q === "" || text.includes(q)) {
-      item.classList.remove("hidden");
-      visibleCount++;
+    const text = item.textContent.toLowerCase();
+    if (text.includes(input) || input === "") {
+      item.style.display = "block";
+      found = true;
     } else {
-      item.classList.add("hidden");
+      item.style.display = "none";
     }
   }
 
-  // show / hide "no results" message
-  const noMsg = document.getElementById("noResults");
-  if (noMsg) {
-    noMsg.style.display = visibleCount === 0 ? "block" : "none";
-  }
+  // Show message if nothing matches
+  document.getElementById("noResults").style.display = found ? "none" : "block";
 }
-
-// Optional: handle Enter key (so pressing Enter won't reload the page)
-document.addEventListener('DOMContentLoaded', function() {
-  const input = document.getElementById('searchInput');
-  if(input){
-    input.addEventListener('keydown', function(e){
-      if(e.key === 'Enter'){ e.preventDefault(); searchProducts(); }
-    });
-  }
-});
 </script>
-
-<!-- Add this no-results element somewhere under the search input -->
-<div id="noResults">No products found. Try another search.</div>
 
     
   
