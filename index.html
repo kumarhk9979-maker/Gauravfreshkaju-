@@ -118,24 +118,75 @@
   </div>
 </div>
 
-    <!-- 🔍 Search Section -->
-<div style="text-align:center; margin: 20px;">
-  <label for="searchInput" style="font-weight:600; font-size:16px;">Search 🔎</label><br>
-  <input type="text" id="searchInput" placeholder="Type to search products..." 
-         style="padding:10px; width:80%; max-width:400px; margin-top:8px; border-radius:10px; border:1px solid #ccc;">
-</div>
+<!-- ✨ Updated Search CSS (use with existing input id="searchInput") -->
+<style>
+/* keep nice animation but target .card */
+.card {
+  transition: all 0.28s ease;
+  opacity: 1;
+}
+.card.hidden {
+  opacity: 0;
+  transform: scale(0.97);
+  pointer-events: none;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
 
+/* no-results message */
+#noResults {
+  display: none;
+  text-align: center;
+  margin-top: 12px;
+  color: #b65b00;
+  font-weight:700;
+}
+</style>
+
+<!-- 🔎 Search filter + no-results -->
 <script>
-  // 🧠 Search Filter Logic
-  document.getElementById('searchInput').addEventListener('input', function() {
-    const filter = this.value.toLowerCase();
-    const products = document.querySelectorAll('.product-card');
-    products.forEach(product => {
-      const text = product.innerText.toLowerCase();
-      product.style.display = text.includes(filter) ? '' : 'none';
+function searchProducts() {
+  const input = document.getElementById("searchInput");
+  if(!input) return; // safety
+  const q = input.value.trim().toLowerCase();
+  const products = document.getElementsByClassName("card"); // <- use "card" (your HTML)
+  let visibleCount = 0;
+
+  for (let i = 0; i < products.length; i++) {
+    const item = products[i];
+    // prefer innerText (gives visible text) but fallback to textContent
+    const text = (item.innerText || item.textContent || "").toLowerCase();
+
+    if (q === "" || text.includes(q)) {
+      item.classList.remove("hidden");
+      visibleCount++;
+    } else {
+      item.classList.add("hidden");
+    }
+  }
+
+  // show / hide "no results" message
+  const noMsg = document.getElementById("noResults");
+  if (noMsg) {
+    noMsg.style.display = visibleCount === 0 ? "block" : "none";
+  }
+}
+
+// Optional: handle Enter key (so pressing Enter won't reload the page)
+document.addEventListener('DOMContentLoaded', function() {
+  const input = document.getElementById('searchInput');
+  if(input){
+    input.addEventListener('keydown', function(e){
+      if(e.key === 'Enter'){ e.preventDefault(); searchProducts(); }
     });
-  });
+  }
+});
 </script>
+
+<!-- Add this no-results element somewhere under the search input -->
+<div id="noResults">No products found. Try another search.</div>
 
     
   
