@@ -2,7 +2,3 @@ User-agent: *
 Allow: /
 
 Sitemap: https://kumarhk9979-maker.github.io/GauravStore/sitemap.xml
-
-# Disallow unnecessary folders (agar baad me ye folder bano)
-Disallow: /private/
-Disallow: /temp/
