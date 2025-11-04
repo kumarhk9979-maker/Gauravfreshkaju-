@@ -117,7 +117,7 @@
     
   </div>
 </div>
-<!-- 🔍 Search Bar -->
+  <!-- 🔍 Search Bar -->
 <div style="text-align:center; margin:20px 0;">
   <label for="searchInput" style="font-weight:600;">Search 🔍</label><br>
   <input
@@ -132,38 +132,29 @@
   </div>
 </div>
 
-<!-- 🔍 Search Script -->
+<!-- 🧠 Script -->
 <script>
 function searchProducts() {
   const input = document.getElementById("searchInput").value.toLowerCase();
-  const container = document.querySelector("[aria-label='Products'] .grid, .products-grid, .cards"); 
-  const products = document.getElementsByClassName("card");
-  let found = false;
-  let matches = [];
+  const cards = document.getElementsByClassName("card");
+  let visibleCount = 0;
 
-  // Clear container before refilling (to re-sort visible ones)
-  for (let product of products) {
-    const text = product.textContent.toLowerCase();
+  for (let i = 0; i < cards.length; i++) {
+    const item = cards[i];
+    const text = item.innerText.toLowerCase();
+
     if (text.includes(input) || input === "") {
-      matches.push(product);
-      product.style.display = "block";
-      found = true;
+      item.style.display = "block";
+      visibleCount++;
     } else {
-      product.style.display = "none";
+      item.style.display = "none";
     }
   }
 
-  // Bring matched items to top (prevents bottom-fixed product)
-  if (container && matches.length > 0) {
-    matches.forEach(p => container.appendChild(p));
-  }
-
-  document.getElementById("noResults").style.display = found ? "none" : "block";
+  const noResults = document.getElementById("noResults");
+  noResults.style.display = visibleCount === 0 ? "block" : "none";
 }
-</script>
-    
-
-    
+       </script>  
   
 </section>
 
