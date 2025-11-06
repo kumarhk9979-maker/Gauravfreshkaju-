@@ -2,7 +2,21 @@
 <!doctype html>
 
 <html lang="en">  
-<head>  
+<head>
+ <style>
+/* Sequence maintain karne ke liye Flexbox */
+.product-gallery {
+    display: flex;
+    flex-wrap: wrap; /* Row full hone par next row me wrap kare */
+    gap: 20px;       /* Card ke beech ka gap */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.product-card {
+    flex: 1 1 250px; /* Minimum width 250px, grow & shrink allowed */
+}
+</style> 
   <meta charset="utf-8" />  
   <meta name="viewport" content="width=device-width,initial-scale=1" />  
   <meta name="google-site-verification" content="iBJh_cAHkQBIxjozI7xL-Wjohzvp1deaG5Ak7PUWsYo" />    
