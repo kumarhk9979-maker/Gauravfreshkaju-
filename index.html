@@ -1,4 +1,4 @@
- <!doctype html>
+<!doctype html>
 
 <html lang="en">  
 <head>
@@ -16,7 +16,7 @@
   <meta name="author" content="Gaurav Kumar" />  
   <meta property="og:title" content="GAURAV STORE | Premium Dry Fruits & Groceries" />  
   <meta property="og:description" content="Get ₹50 Discount + Surprise Gift on Orders Above ₹1000!" />  
-  <meta property="og:image" content="https://i.ibb.co/3mbcBk2t/Screenshot-20251102-121611.png" />  
+  <meta property="og:image" content="https://i.imgur.com/8x2T6yZ.png" />  
   <meta property="og:type" content="website" />    <style>  
     :root{  
       --bg:#fffaf2;  
@@ -38,7 +38,42 @@
     }  
     .wrap{max-width:var(--maxw);margin:18px auto;padding:14px}  
     header{display:flex;align-items:center;gap:12px;padding:12px;border-radius:var(--radius);background:linear-gradient(90deg,rgba(209,127,0,0.06),rgba(209,127,0,0.02));box-shadow:var(--shadow)}  
-    .logo{width:68px;height:68px;border-radius:10px;background:linear-gradient(135deg,var(--brand),var(--brand-dark));display:flex;align-items:center;justify-content:center;color:#fff;font-weight:900;font-size:22px;box-shadow:0 8px 20px rgba(209,127,0,0.12)}  
+    
+    /* 🎨 LOGO CSS UPDATED FOR LINK AND IMAGE FIT */
+    .logo{
+      width:68px;
+      height:68px;
+      border-radius:10px;
+      background:linear-gradient(135deg,var(--brand),var(--brand-dark));
+      display:flex; /* Ensure alignment */
+      align-items:center;
+      justify-content:center;
+      color:#fff;
+      font-weight:900;
+      font-size:22px;
+      box-shadow:0 8px 20px rgba(209,127,0,0.12);
+      /* Ensure the logo container is above other elements if positioned (optional) */
+      /* position: relative; z-index: 10; */ 
+    }  
+    /* Added styles for the anchor and image inside the logo div */
+    .logo a {
+        display: block;
+        line-height: 0; /* Important to remove extra space below image */
+        width: 100%;
+        height: 100%;
+        display: flex; /* For centering content within the link */
+        align-items: center;
+        justify-content: center;
+    }
+    .logo img {
+        width: 58px !important; /* Force width */
+        height: 58px !important; /* Force height */
+        border-radius: 8px !important; /* Maintain border radius */
+        object-fit: cover !important;
+        margin: auto; /* Center the image within the flex container */
+        border: none;
+    }
+
     header h1{margin:0;font-size:20px}  
     header p{margin:4px 0 0;color:#6a4a1f;font-size:13px}  
     .offer{margin-top:12px;padding:10px;border-radius:10px;background:linear-gradient(90deg,#ffefcf,#fff1d6);color:var(--brand-dark);font-weight:700;text-align:center;box-shadow:var(--shadow)}  
@@ -99,89 +134,97 @@
   
   <div class="wrap">  
     <header>  
-      <div class="logo"><img src=<"a href="https://ibb.co/4ZwDGmqd"><img src="https://i.ibb.co/WWNdwxht/Screenshot-20251106-105049.png" alt="Screenshot-20251106-105049" border="0"></a> "></div>  
+      <div class="logo">
+        <a href="https://ibb.co/xKwvh8Ts">
+          <img src="https://i.ibb.co/5XCDTxH9/1762405865975.png" alt="New Store Logo" 
+               style="width: 58px; height: 58px; border-radius: 8px; object-fit: cover;">
+        </a>
+      </div>
       <div>  
         <h1>GAURAV STORE</h1>  
         <p>Premium Dry Fruits & Groceries</p>  
       </div>  
-    </header>  <div class="offer"><strong>🎁 Get ₹50 Discount + Surprise Gift on Orders Above ₹1000!</strong></div>  
-
-<div class="note">
-  <strong>How to order:</strong>
-  <div style="margin-top:6px; line-height:1.6">
-    1) Tap a product → Click “Buy on WhatsApp”. <br>
-    2) Send quantity, name & address. <br>
-    3) Payment via <strong>UPI</strong> (details shared on WhatsApp) <strong> or Cash on delivery </strong> . <br>
+    </header>  
     
-  </div>
-</div>
-  <div style="text-align:center; margin:20px 0;">
-  <label for="searchInput" style="font-weight:600;">Search 🔍</label><br>
-  <input
-    type="text"
-    id="searchInput"
-    placeholder="Search for products..."
-    onkeyup="searchProducts()"
-    style="margin-top:8px; padding:8px 12px; width:80%; max-width:400px; border:2px solid #ccc; border-radius:8px; font-size:16px;"
-  >
-  <div id="noResults" style="display:none; margin-top:10px; color:#b5651d; font-weight:600;">
-    No products found. Try another search.
-  </div>
-</div>
+    <div class="offer"><strong>🎁 Get ₹50 Discount + Surprise Gift on Orders Above ₹1000!</strong></div>  
 
-<script>
-function searchProducts() {
-  const input = document.getElementById("searchInput").value.toLowerCase();
-  const cards = document.getElementsByClassName("card");
-  let visibleCount = 0;
-
-  for (let i = 0; i < cards.length; i++) {
-    const item = cards[i];
-    const text = item.innerText.toLowerCase();
-
-    // Check if the card's text contains the search input. Also, ensure category headings are always visible.
-    const isCategoryHeading = item.previousElementSibling && item.previousElementSibling.tagName === 'H3';
+    <div class="note">
+      <strong>How to order:</strong>
+      <div style="margin-top:6px; line-height:1.6">
+        1) Tap a product → Click “Buy on WhatsApp”. <br>
+        2) Send quantity, name & address. <br>
+        3) Payment via <strong>UPI</strong> (details shared on WhatsApp) <strong> or Cash on delivery </strong> . <br>
+        
+      </div>
+    </div>
     
-    if (text.includes(input) || input === "" || isCategoryHeading) {
-      item.style.display = "flex"; // Changed from "block" to "flex" to maintain card layout
-      visibleCount++;
-    } else {
-      item.style.display = "none";
-    }
-  }
+    <div style="text-align:center; margin:20px 0;">
+      <label for="searchInput" style="font-weight:600;">Search 🔍</label><br>
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Search for products..."
+        onkeyup="searchProducts()"
+        style="margin-top:8px; padding:8px 12px; width:80%; max-width:400px; border:2px solid #ccc; border-radius:8px; font-size:16px;"
+      >
+      <div id="noResults" style="display:none; margin-top:10px; color:#b5651d; font-weight:600;">
+        No products found. Try another search.
+      </div>
+    </div>
 
-  // Handle visibility of category headings if all products under them are hidden.
-  const headings = document.querySelectorAll('.grid h3');
-  headings.forEach(heading => {
-      let nextElement = heading.nextElementSibling;
-      let hasVisibleProduct = false;
-      while (nextElement && nextElement.tagName !== 'H3' && nextElement.tagName !== 'SECTION') {
-          if (nextElement.style.display !== 'none') {
-              hasVisibleProduct = true;
-              break;
+    <script>
+    function searchProducts() {
+      const input = document.getElementById("searchInput").value.toLowerCase();
+      const cards = document.getElementsByClassName("card");
+      let visibleCount = 0;
+
+      for (let i = 0; i < cards.length; i++) {
+        const item = cards[i];
+        const text = item.innerText.toLowerCase();
+
+        // Check if the card's text contains the search input.
+        const isCategoryHeading = item.previousElementSibling && item.previousElementSibling.tagName === 'H3';
+        
+        if (text.includes(input) || input === "" || isCategoryHeading) {
+          item.style.display = "flex"; 
+          visibleCount++;
+        } else {
+          item.style.display = "none";
+        }
+      }
+
+      // Handle visibility of category headings if all products under them are hidden.
+      const headings = document.querySelectorAll('.grid h3');
+      headings.forEach(heading => {
+          let nextElement = heading.nextElementSibling;
+          let hasVisibleProduct = false;
+          while (nextElement && nextElement.tagName !== 'H3' && nextElement.tagName !== 'SECTION' && nextElement.tagName !== 'FOOTER') {
+              if (nextElement.classList.contains('card') && nextElement.style.display !== 'none') {
+                  hasVisibleProduct = true;
+                  break;
+              }
+              // This is a quick fix for the search logic, focusing only on cards.
+              if(nextElement.classList.contains('card') === false) break; // Stop checking non-product elements
+              nextElement = nextElement.nextElementSibling;
           }
-          nextElement = nextElement.nextElementSibling;
+          heading.style.display = hasVisibleProduct ? 'block' : 'none';
+      });
+      
+      // Re-calculate visible count considering only product cards for 'no results'
+      let visibleProductCount = 0;
+      for (let i = 0; i < cards.length; i++) {
+          if (cards[i].style.display !== 'none') {
+              visibleProductCount++;
+          }
       }
-      heading.style.display = hasVisibleProduct ? 'block' : 'none';
-  });
-  
-  // Re-calculate visible count considering only product cards for 'no results'
-  let visibleProductCount = 0;
-  for (let i = 0; i < cards.length; i++) {
-      if (cards[i].style.display !== 'none') {
-          visibleProductCount++;
-      }
-  }
 
 
-  const noResults = document.getElementById("noResults");
-  // Show no results if no product cards are visible.
-  noResults.style.display = visibleProductCount === 0 && input !== "" ? "block" : "none";
-}
-       </script>  
-  
-</section>
-
+      const noResults = document.getElementById("noResults");
+      // Show no results if no product cards are visible.
+      noResults.style.display = visibleProductCount === 0 && input !== "" ? "block" : "none";
+    }
+           </script>  
+      
 <section aria-label="Products">  
   <div class="grid">  
 
@@ -406,186 +449,27 @@ function searchProducts() {
         <div class="small">Garam masala - 50 g</div>
           <div class="price">₹70</div>
           <div class="small" style="margin-top:6px">Delivery charges depend on location</div>
-          <a class="btn" href="#" onclick="orderWhatsApp('Garam masala',70)">Buy on WhatsApp</a>
-      </div>
-    </article>
+          <a class="btn" href="#" onclick="orderWhatsApp('Garam masala 50g',70)">Buy on WhatsApp</a>
+        </div>
+      </article>
 
-    <article class="card">
-      <div class="media"><img src="https://i.ibb.co/8DBLRJ8h/Screenshot-20251103-122559.png" alt="Besan 250g"></div>
-      <div class="body">
-        <div class="small">Besan — 250 g</div>
-        <div class="price">₹40</div>
-        <div class="small" style="margin-top:6px">Delivery charges depend on location</div>
-        <a class="btn" href="#" onclick="orderWhatsApp('Besan 250g',40)">Buy on WhatsApp</a>
-      </div>
-    </article>
-
-    <article class="card">
-      <div class="media"><a href="https://ibb.co/847Xfrck"><img src="https://i.ibb.co/7N1bZn4h/Screenshot-20251106-063808.png" alt="Screenshot-20251106-063808" border="0"></a>
-        <div class="body">
-        <div class="small"> Horlicks 500g jar</div>
-          <div class="price">₹260</div>
-          <div class="small" style="margin-top:6px">Delivery charges depend on location</div>
-          <a class="btn" href="#" onclick="orderWhatsApp('Horlicks 500g',260)">Buy on WhatsApp</a>
-      </div>
-    </article>
-
-    <article class="card">
-      <div class="media"><a href="https://ibb.co/mVP4Qryn"><img src="https://i.ibb.co/sdXqLp1T/20251104-223036-COLLAGE.jpg" alt="20251104-223036-COLLAGE" border="0"></a>
-        <div class="body">
-        <div class="small"> Sev - 800g</div>
-          <div class="price">₹120</div>
-          <div class="small" style="margin-top:6px">Delivery charges depend on location</div>
-          <a class="btn" href="#" onclick="orderWhatsApp('Sev',120)">Buy on WhatsApp</a>
-      </div>
-    </article>
-
-    <article class="card">
-      <div class="media">
-        <img src="https://i.ibb.co/SX8510rx/20251104-095102-COLLAGE.jpg" alt="Premium Black Polythene Bag">
-      </div>
-      <div class="body">
-        <div class="small">Premium Black Polythene (2.5 kg Capacity) — 200g</div>
-        <div class="price">₹55</div>
-        <div class="bold-note">Premium Quality, Durable Material</div>
-        <div class="small" style="margin-top:6px">Delivery charges depend on location</div>
-        <a class="btn" href="#" onclick="orderWhatsApp('Black polythene 200g ', 55)">Buy on WhatsApp</a>
-      </div>
-    </article>
-
-  </div>  
-</section>  
-
-<section class="info" id="reviewsSection">  
-  <h3 style="margin:0 0 8px 0">Customer Reviews <span id="avgStars" style="margin-left:10px;color:#e59600;font-weight:800"></span></h3>  
-  <div class="reviews" id="reviewList" aria-live="polite">  
-    </div>  
-
-  <div style="margin-top:10px;text-align:left;max-width:560px;margin-left:auto;margin-right:auto">  
-    <label for="ratingSelect"><strong>Your rating:</strong></label><br>  
-    <select id="ratingSelect" aria-label="Rating">  
-      <option value="5">5 — Excellent</option>  
-      <option value="4">4 — Very Good</option>  
-      <option value="3">3 — Good</option>  
-      <option value="2">2 — Fair</option>  
-      <option value="1">1 — Poor</option>  
-    </select>  
-    <br>  
-    <input id="reviewInput" type="text" placeholder="Write your review..." aria-label="Write your review" />  
-    <br>  
-    <button class="submit" onclick="submitReview()">Submit Review</button>  
-  </div>  
-<section class="info" style="margin-top:12px">
-  <h3 style="margin:0 0 8px 0">Payment & Return Policy</h3>
-  <p class="small" style="margin:0">
-    <strong>Payment:</strong> 
-    Payments are accepted <strong>via UPI only</strong> or cash on delivery. Once your order is confirmed, our official UPI details will be shared with you on WhatsApp for a secure transaction.  
-    Please ensure that the amount is transferred to the verified UPI ID provided by <strong>GAURAV STORE</strong> before dispatch.<br><br>
-    
-    <strong>Return & Replacement Policy:</strong>  
-    We take utmost care to maintain the freshness, hygiene, and quality of our products.  
-    Since these are food items, <strong>returns or replacements are not applicable</strong> once the package has been delivered or opened.  
-    However, if a product arrives in a damaged, leaked, or incorrect condition, please contact us within <strong>24 hours of delivery</strong> with clear photos of the package.  
-    Our team will promptly review your case and assist you in the best possible way.  
-    <br><br>
-    We value your trust and aim to ensure a safe, transparent, and satisfying shopping experience at <strong>GAURAV STORE</strong>.
-  </p>
+  </div>
 </section>
 
-
-
-<footer>  
- 
-  © 2025 GAURAV STORE  
+<footer>
+  © 2025 Gaurav Store. All rights reserved. | Developed by: Gaurav Kumar
 </footer>
 
-  </div>    <script>  
-    // WhatsApp number parts (hidden)  
-    const parts = ['919942','849146']; // +91 9942849146  
-  
-    function orderWhatsApp(product, price){  
-      const msg = encodeURIComponent(  
-        'Namaste! I want to order:\n' +  
-        product + ' (₹' + price + ')\n\n' +  
-        'Quantity: ___________\n' +  
-        'Name: ___________\n' +  
-        'Address: ___________\n' +  
-        'Mobile No: ___________'  
-      );  
-      const waUrl = 'https://wa.me/' + parts.join('') + '?text=' + msg;  
-      window.open(waUrl, '_blank');  
-    }  
-  
-    // --- Reviews + Ratings (localStorage) ---  
-    const STORAGE_KEY = 'gaurav_store_reviews_v2';  
-  
-    // default demo reviews (used if storage empty)  
-    const demo = [  
-      {name:'Rohan', text:'Very fresh and tasty dry fruits!', rating:5},  
-      {name:'Sneha', text:'Fast delivery and good packaging.', rating:4},  
-      {name:'Priya', text:'Loved the quality of almonds!', rating:5}  
-    ];  
-  
-    function loadReviews(){  
-      const raw = localStorage.getItem(STORAGE_KEY);  
-      if(!raw){  
-        localStorage.setItem(STORAGE_KEY, JSON.stringify(demo));  
-        return demo.slice();  
-      }  
-      try{  
-        return JSON.parse(raw);  
-      }catch(e){  
-        localStorage.setItem(STORAGE_KEY, JSON.stringify(demo));  
-        return demo.slice();  
-      }  
-    }  
-  
-    function saveReviews(list){  
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(list));  
-    }  
-  
-    function renderReviews(){  
-      const list = loadReviews();  
-      const container = document.getElementById('reviewList');  
-      container.innerHTML = '';  
-      let sum = 0;  
-      list.forEach(r => {  
-        sum += Number(r.rating||0);  
-        const d = document.createElement('div');  
-        d.className = 'review-item';  
-        const stars = '★'.repeat(r.rating) + '☆'.repeat(5 - r.rating);  
-        d.innerHTML = '<div class="stars">'+stars+'</div><div style="margin-top:6px">'+escapeHtml(r.text)+'</div><div style="margin-top:6px;font-size:12px;color:#666">- '+escapeHtml(r.name||'Customer')+'</div>';  
-        container.appendChild(d);  
-      });  
-      const avg = list.length ? (sum / list.length) : 0;  
-      const avgRounded = Math.round(avg);  
-      const avgStars = '★'.repeat(avgRounded) + '☆'.repeat(5 - avgRounded);  
-      document.getElementById('avgStars').textContent = avgStars + ' (' + avg.toFixed(1) + ')';  
-    }  
-  
-    function submitReview(){  
-      const input = document.getElementById('reviewInput');  
-      const rating = Number(document.getElementById('ratingSelect').value);  
-      const text = input.value.trim();  
-      if(!text){  
-        alert('Please write a short review first.');  
-        return;  
-      }  
-      const name = prompt('Enter your name (optional):') || 'Customer';  
-      const list = loadReviews();  
-      list.unshift({name: name, text: text, rating: rating});  
-      if(list.length > 200) list.length = 200;  
-      saveReviews(list);  
-      input.value = '';  
-      renderReviews();  
-    }  
-  
-    function escapeHtml(str){  
-      return String(str).replace(/[&<>"']/g, function(m){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]; });  
-    }  
-  
-    // initial render  
-    renderReviews();  
-  </script>  </body>  
+<script>
+  function orderWhatsApp(productName, price) {
+    const phoneNumber = '918084656461'; // यह WhatsApp नंबर है
+    const message = `Hello, I would like to order: ${productName}. Price: ₹${price}. Please provide payment and delivery details.`;
+    const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappURL, '_blank');
+  }
+</script>
+
+</body>
 </html>
+
  
