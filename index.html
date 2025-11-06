@@ -61,17 +61,21 @@
     header p{margin:4px 0 0;color:#6a4a1f;font-size:13px}  
     .offer{margin-top:12px;padding:10px;border-radius:10px;background:linear-gradient(90deg,#ffefcf,#fff1d6);color:var(--brand-dark);font-weight:700;text-align:center;box-shadow:var(--shadow)}  
     .note{margin-top:12px;padding:12px;border-radius:10px;background:var(--card);border-left:4px solid var(--brand);box-shadow:var(--shadow);font-size:14px}  
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin-top:16px}  
-    .card{background:var(--card);border-radius:12px;overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column}  
-    .media{padding:12px;display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg,rgba(209,127,0,0.03),rgba(209,127,0,0.01))}  
-    .media img{width:100%;height:200px;object-fit:cover;border-radius:8px}  
-    .body{padding:12px;flex:1;display:flex;flex-direction:column;align-items:center}  
-    .small{font-size:13px;color:#555;text-align:center}  
-    .price{font-weight:900;color:var(--brand-dark);margin-top:8px;font-size:18px}  
-    .bold-note{font-weight:800;color:#000;margin-top:6px}  
+    
+    /* COMPACT DESIGN START */
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;margin-top:16px} /* Grid made tighter (180px minimum) */ 
+    .card{background:var(--card);border-radius:12px;overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column; padding: 0;} /* Removed default padding */ 
+    .media{padding:8px;display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg,rgba(209,127,0,0.03),rgba(209,127,0,0.01))} /* Reduced padding */ 
+    .media img{width:100%;height:140px;object-fit:cover;border-radius:8px} /* Image height drastically reduced (200px -> 140px) */ 
+    .body{padding:8px;flex:1;display:flex;flex-direction:column;align-items:center} /* Reduced padding */ 
+    /* COMPACT DESIGN END */
+
+    .small{font-size:13px;color:#555;text-align:center; margin-top: 4px;}  
+    .price{font-weight:900;color:var(--brand-dark);margin-top:6px;font-size:17px} /* Reduced price margin */ 
+    .bold-note{font-weight:800;color:#000;margin-top:4px; font-size: 12px;} /* Reduced margin/size */
     .tag{background:rgba(209,127,0,0.08);color:var(--brand-dark);padding:6px 8px;border-radius:8px;font-weight:700;font-size:13px}  
-    .btn{display:inline-block;margin-top:12px;padding:10px 14px;border-radius:10px;background:linear-gradient(90deg,var(--brand),var(--brand-dark));color:#fff;text-decoration:none;font-weight:800;box-shadow:0 10px 26px rgba(209,127,0,0.12)}  
-    .btn:hover{transform:translateY(-3px)}  
+    .btn{display:inline-block;margin-top:8px;padding:8px 12px;border-radius:8px;background:linear-gradient(90deg,var(--brand),var(--brand-dark));color:#fff;text-decoration:none;font-weight:700;box-shadow:0 6px 20px rgba(209,127,0,0.12); font-size: 14px;} /* Button made smaller */
+    .btn:hover{transform:translateY(-2px)}  
     .info{margin-top:16px;padding:12px;border-radius:10px;background:var(--card);box-shadow:var(--shadow)}  
     .reviews {margin-top:18px;text-align:left}  
     .review-item{background:#fff;padding:8px;border-radius:8px;margin-bottom:8px;box-shadow:0 2px 6px rgba(0,0,0,0.05)}  
@@ -80,7 +84,7 @@
     select{padding:8px;border-radius:8px;border:1px solid #ddd;margin-bottom:8px}  
     button.submit{background:var(--brand);color:#fff;padding:8px 12px;border-radius:8px;border:none;font-weight:700;cursor:pointer}  
     footer{margin-top:20px;padding:14px;text-align:center;color:#5b3f14;font-size:13px}  
-    @media(max-width:420px){.media img{height:140px}}  
+    @media(max-width:420px){.media img{height:100px}} /* On very small screens, make image even smaller */
   </style>  </head>  
 <body>  
 <style>
@@ -279,38 +283,26 @@ function searchProducts() {
     <h3 style="grid-column: 1 / -1; margin-top: 20px; border-bottom: 2px solid var(--brand); padding-bottom: 5px; color: var(--brand-dark);">
       🥣 Dal, Pulses & Cereals
     </h3>
-
+    
+    <article class="card">
+      <div class="media"><img src="https://i.ibb.co/y5L8B1k/1000010097.png" alt="Arhar Dal 500g"></div>
+      <div class="body">
+        <div class="small">Arhar Dal (Toor Dal) — 500 g</div>
+        <div class="price">₹70</div>
+        <div class="bold-note">Excellent Taste & Quality</div>
+        <div class="small" style="margin-top:6px">Delivery charges depend on location</div>
+        <a class="btn" href="#" onclick="orderWhatsApp('Arhar Dal (Toor Dal) 500g',70)">Buy on WhatsApp</a>
+      </div>
+    </article>
     <article class="card">
       <div class="media"><a href="https://ibb.co/Cr0QMYs"><img src="https://i.ibb.co/PSCg9Pz/Screenshot-20251106-070144.png" alt="Screenshot-20251106-070144" border="0"></a>
         <div class="body">
           <div class="small"> Masoor dal 1 kg </div>
           <div class="price">₹90</div>
           <div class="small" style="margin-top:6px">Delivery charges depend on location</div>
-          <a class="btn" href="#" onclick="orderWhatsApp('Masoor dal 1kg',90)">Buy on WhatsApp</a>
+          <a class="btn" href="#" onclick="orderWhatsApp('Masoor dal',90)">Buy on WhatsApp</a>
         </div>
       </article>
-    
-
-    <article class="card">
-                  <div class="media"><a href="https://ibb.co/pvP568kk"><img src="https://i.ibb.co/KjGSck88/Screenshot-20251106-163204.png" alt="Screenshot-20251106-163204" border="0"></a>
-        <div class="body">
-          <div class="small"> Chana 1 kg</div>
-          <div class="price">₹90</div>
-          <div class="small" style="margin-top:6px">Delivery charges depend on location</div>
-          <a class="btn" href="#" onclick="orderWhatsApp('Chana 1kg',90)">Buy on WhatsApp</a>
-        </div>
-    </article>
-
-    
-    <article class="card">
-                <div class="media"><a href="https://ibb.co/pBHq8kLR"><img src="u" alt="Screenshot-20251106-160924" border="0"></a>
-        <div class="body">
-          <div class="small"> Kheshari daal</div>
-          <div class="price">₹45</div>
-          <div class="small" style="margin-top:6px">Delivery charges depend on location</div>
-          <a class="btn" href="#" onclick="orderWhatsApp('Kheshari daal 500g',45)">Buy on WhatsApp</a>
-        </div>
-    </article>
 
     <article class="card">
       <div class="media"><a href="https://imgbb.com/"><img src="https://i.ibb.co/rGjV7Rq5/Screenshot-20251105-151636.png" alt="Screenshot-20251105-151636" border="0"></a>
@@ -319,7 +311,7 @@ function searchProducts() {
           <div class="price">₹45</div>
           <div class="bold-note">Best quality & excellent in taste</div>
           <div class="small" style="margin-top:6px">Delivery charges depend on location</div>
-          <a class="btn" href="#" onclick="orderWhatsApp('White Matar (Kabli) 500g',45)">Buy on WhatsApp</a>
+          <a class="btn" href="#" onclick="orderWhatsApp('White Matar (Kabli)',45)">Buy on WhatsApp</a>
         </div>
       </article>
 
@@ -628,6 +620,7 @@ function searchProducts() {
     renderReviews();  
   </script>  </body>  
 </html>
+
 
 
  
