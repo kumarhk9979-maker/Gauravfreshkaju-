@@ -1,5 +1,4 @@
-
-<!doctype html>
+ <!doctype html>
 
 <html lang="en">  
 <head>
@@ -66,7 +65,6 @@
     @media(max-width:420px){.media img{height:140px}}  
   </style>  </head>  
 <body>  
-<!-- 🚚 Animated Delivery Banner -->
 <style>
   .delivery-banner {
     background: linear-gradient(90deg, #ffcc00, #ff9900);
@@ -117,8 +115,7 @@
     
   </div>
 </div>
-  <!-- 🔍 Search Bar -->
-<div style="text-align:center; margin:20px 0;">
+  <div style="text-align:center; margin:20px 0;">
   <label for="searchInput" style="font-weight:600;">Search 🔍</label><br>
   <input
     type="text"
@@ -132,7 +129,6 @@
   </div>
 </div>
 
-<!-- 🧠 Script -->
 <script>
 function searchProducts() {
   const input = document.getElementById("searchInput").value.toLowerCase();
@@ -143,16 +139,44 @@ function searchProducts() {
     const item = cards[i];
     const text = item.innerText.toLowerCase();
 
-    if (text.includes(input) || input === "") {
-      item.style.display = "block";
+    // Check if the card's text contains the search input. Also, ensure category headings are always visible.
+    const isCategoryHeading = item.previousElementSibling && item.previousElementSibling.tagName === 'H3';
+    
+    if (text.includes(input) || input === "" || isCategoryHeading) {
+      item.style.display = "flex"; // Changed from "block" to "flex" to maintain card layout
       visibleCount++;
     } else {
       item.style.display = "none";
     }
   }
 
+  // Handle visibility of category headings if all products under them are hidden.
+  const headings = document.querySelectorAll('.grid h3');
+  headings.forEach(heading => {
+      let nextElement = heading.nextElementSibling;
+      let hasVisibleProduct = false;
+      while (nextElement && nextElement.tagName !== 'H3' && nextElement.tagName !== 'SECTION') {
+          if (nextElement.style.display !== 'none') {
+              hasVisibleProduct = true;
+              break;
+          }
+          nextElement = nextElement.nextElementSibling;
+      }
+      heading.style.display = hasVisibleProduct ? 'block' : 'none';
+  });
+  
+  // Re-calculate visible count considering only product cards for 'no results'
+  let visibleProductCount = 0;
+  for (let i = 0; i < cards.length; i++) {
+      if (cards[i].style.display !== 'none') {
+          visibleProductCount++;
+      }
+  }
+
+
   const noResults = document.getElementById("noResults");
-  noResults.style.display = visibleCount === 0 ? "block" : "none";
+  // Show no results if no product cards are visible.
+  noResults.style.display = visibleProductCount === 0 && input !== "" ? "block" : "none";
 }
        </script>  
   
@@ -161,58 +185,108 @@ function searchProducts() {
 <section aria-label="Products">  
   <div class="grid">  
 
-    <!-- Kaju single -->  
-    <article class="card">  
-      <div class="media"><img src="https://i.ibb.co/3mbcBk2t/Screenshot-20251102-121611.png" alt="Kaju 250g"></div>  
-      <div class="body">  
-        <div class="small">Kaju — 250 g</div>  
-        <div class="price">₹250</div>  
-        <div class="bold-note">Buy 4 packets — get 5% off</div>  
-        <div class="small" style="margin-top:6px">Free delivery under 10 km</div>  
-        <a class="btn" href="#" onclick="orderWhatsApp('Kaju 250g',250)">Buy on WhatsApp</a>  
-      </div>  
-    </article>  
+    <h3 style="grid-column: 1 / -1; margin-top: 10px; border-bottom: 2px solid var(--brand); padding-bottom: 5px; color: var(--brand-dark);">
+      🌰 Dry Fruits
+    </h3>
 
-    <!-- Kaju 4 pack (Buy 4) -->  
-    <article class="card">  
-      <div class="media"><img src="https://i.ibb.co/3mbcBk2t/Screenshot-20251102-121611.png" alt="Kaju 3x250g"></div>  
-      <div class="body">  
-        <div class="small">Kaju — 250 g × 4 (Buy 4)</div>  
-        <div class="price">₹950 <span style="font-size:12px;color:#666"> (5% applied)</span></div>  
-        <div class="small">Free delivery under 10 km</div>  
-        <a class="btn" href="#" onclick="orderWhatsApp('Kaju 4x250g Pack',950)">Buy on WhatsApp</a>  
-      </div>  
-    </article>  
-
-    <!-- Horlicks -->
-        <article class="card">  
-      <div class="media"<a href="https://ibb.co/847Xfrck"><img src="https://i.ibb.co/7N1bZn4h/Screenshot-20251106-063808.png" alt="Screenshot-20251106-063808" border="0"></a>
-        <div class="body">  
-        <div class="small"> Horlicks 500g jar</div>
-          <div class="price">₹260</div>
-          <div class="small" style="margin-top:6px">Delivery charges depend on location</div>  
-          <a class="btn" href="#" onclick="orderWhatsApp('Horlicks 500g',260)">Buy on WhatsApp</a>  
-      </div>  
+    <article class="card">
+      <div class="media"><img src="https://i.ibb.co/3mbcBk2t/Screenshot-20251102-121611.png" alt="Kaju 250g"></div>
+      <div class="body">
+        <div class="small">Kaju — 250 g</div>
+        <div class="price">₹250</div>
+        <div class="bold-note">Buy 4 packets — get 5% off</div>
+        <div class="small" style="margin-top:6px">Free delivery under 10 km</div>
+        <a class="btn" href="#" onclick="orderWhatsApp('Kaju 250g',250)">Buy on WhatsApp</a>
+      </div>
     </article>
 
-    
-
-    <!-- Jeera -->
-    <article class="card">  
-      <div class="media"><a href="https://ibb.co/FLSP55KZ"><img src="https://i.ibb.co/YFzrcc3n/Screenshot-20251105-230113.png" alt="Screenshot-20251105-230113" border="0"></a>
-        <div class="body">  
-        <div class="small"> Jeera (cumin) - 200 g</div>
-          <div class="price">₹70</div>
-          <div class="small" style="margin-top:6px">Delivery charges depend on location</div>  
-          <a class="btn" href="#" onclick="orderWhatsApp('Jeera (cumin)',70)">Buy on WhatsApp</a>  
-      </div>  
+    <article class="card">
+      <div class="media"><img src="https://i.ibb.co/3mbcBk2t/Screenshot-20251102-121611.png" alt="Kaju 3x250g"></div>
+      <div class="body">
+        <div class="small">Kaju — 250 g × 4 (Buy 4)</div>
+        <div class="price">₹950 <span style="font-size:12px;color:#666"> (5% applied)</span></div>
+        <div class="small">Free delivery under 10 km</div>
+        <a class="btn" href="#" onclick="orderWhatsApp('Kaju 4x250g Pack',950)">Buy on WhatsApp</a>
+      </div>
     </article>
 
-    <!-- Soyabean -->
-    article class="card">  
+    <article class="card">
+      <div class="media"><img src="https://i.ibb.co/SGpdhtP/Screenshot-20251102-232811.png" alt="Pista 250g"></div>
+      <div class="body">
+        <div class="small">Pista Badam (Almond ) — 250 g</div>
+        <div class="price">₹240</div>
+        <div class="bold-note">Buy 4 packets — get 5% off</div>
+        <div class="small" style="margin-top:6px">Free delivery under 10 km radius</div>
+        <a class="btn" href="#" onclick="orderWhatsApp('Pista Badam (Almond) 250g',240)">Buy on WhatsApp</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="media"><img src="https://i.ibb.co/SGpdhtP/Screenshot-20251102-232811.png" alt="Pista 3x250g"></div>
+      <div class="body">
+        <div class="small">Pista Badam (Almond )— 250 g × 4 (Buy 4)</div>
+        <div class="price">₹912 <span style="font-size:12px;color:#666">(5% applied)</span></div>
+        <div class="small">Free delivery under 10 km</div>
+        <a class="btn" href="#" onclick="orderWhatsApp('Pista Badam (Almond)4x250g Pack',912)">Buy on WhatsApp</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="media">
+        <img src="https://i.ibb.co/kgFWXDn6/Screenshot-20251104-103930.png" alt="Kismis 750g">
+      </div>
+      <div class="body">
+        <div class="small">Kismis (Raisins) — 750 g</div>
+        <div class="price">₹385</div>
+        <div class="bold-note">Best Quality • Best in Taste</div>
+        <div class="small" style="margin-top:6px">Free delivery under 10 km radius</div>
+        <a class="btn" href="#" onclick="orderWhatsApp('Kismis (Raisins) 750g',385)">Buy on WhatsApp</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="media">
+        <img src="https://i.ibb.co/kgFWXDn6/Screenshot-20251104-103930.png" alt="Kismis Raisins 200g">
+      </div>
+      <div class="body">
+        <div class="small">Kismis (Raisins) — 200 g</div>
+        <div class="price">₹120</div>
+        <div class="bold-note">Best quality and best in taste</div>
+        <div class="small" style="margin-top:6px">Free delivery under 10 km radius.</div>
+        <a class="btn" href="#" onclick="orderWhatsApp('Kismis Raisins 200g',120)">Buy on WhatsApp</a>
+      </div>
+    </article>
+
+
+    <h3 style="grid-column: 1 / -1; margin-top: 20px; border-bottom: 2px solid var(--brand); padding-bottom: 5px; color: var(--brand-dark);">
+      🥣 Dal, Pulses & Cereals
+    </h3>
+
+    <article class="card">
+      <div class="media"><a href="https://ibb.co/Cr0QMYs"><img src="https://i.ibb.co/PSCg9Pz/Screenshot-20251106-070144.png" alt="Screenshot-20251106-070144" border="0"></a>
+        <div class="body">
+          <div class="small"> Masoor dal 1 kg </div>
+          <div class="price">₹90</div>
+          <div class="small" style="margin-top:6px">Delivery charges depend on location</div>
+          <a class="btn" href="#" onclick="orderWhatsApp('Masoor dal',90)">Buy on WhatsApp</a>
+        </div>
+      </article>
+
+    <article class="card">
+      <div class="media"><a href="https://imgbb.com/"><img src="https://i.ibb.co/rGjV7Rq5/Screenshot-20251105-151636.png" alt="Screenshot-20251105-151636" border="0"></a>
+        <div class="body">
+          <div class="small"> White Matar (Kabli) - 500 g</div>
+          <div class="price">₹45</div>
+          <div class="bold-note">Best quality & excellent in taste</div>
+          <div class="small" style="margin-top:6px">Delivery charges depend on location</div>
+          <a class="btn" href="#" onclick="orderWhatsApp('White Matar (Kabli)',45)">Buy on WhatsApp</a>
+        </div>
+      </article>
+
+    <article class="card">
       <div class="media"><a href="https://ibb.co/7dG1jg92"><img src="https://i.ibb.co/ZphMGHZW/Screenshot-20251105-154457.png" alt="Screenshot-20251105-154457" border="0"></a>
-              <div class="body">  
-        <div class="small"> Soyabean — 500g</div>  
+              <div class="body">
+        <div class="small"> Soyabean — 500g</div>
         <div class="price">₹55</div>
         <div class="bold-note">Medium size cutting , best quality soyabean</div>
         <div class="small" style="margin-top:6px">Free delivery under 10 km radius</div>
@@ -220,125 +294,6 @@ function searchProducts() {
       </div>
       </article>
 
-      <!--Masoor dal-->
-        article class="card">  
-      <div class="media"><a href="https://ibb.co/Cr0QMYs"><img src="https://i.ibb.co/PSCg9Pz/Screenshot-20251106-070144.png" alt="Screenshot-20251106-070144" border="0"></a>
-        <div class="body">  
-        <div class="small"> Masoor dal 1 kg </div>
-          <div class="price">₹90</div>
-          <div class="small" style="margin-top:6px">Delivery charges depend on location</div>  
-          <a class="btn" href="#" onclick="orderWhatsApp('Masoor dal',90)">Buy on WhatsApp</a>  
-      </div>  
-      </article>
-        
-      
-    
-    <!--Dhara Mustard oil -->
-        article class="card">  
-      <div class="media"
-        <img src=><a href="https://ibb.co/RGJ5DmNN"><img src="https://i.ibb.co/ymx3Q1pp/Screenshot-20251106-061223.png" alt="Screenshot-20251106-061223" border="0"></a>
-      </div>
-    <div class="body">  
-        <div class="small"> Dhara Mustard oil (sarso tel) 1 liter </div>  
-        <div class="price">₹185</div>
-        <div class="small" style="margin-top:6px"></div>
-        <a class="btn" href="#" onclick="orderWhatsApp('Dhara Mustard oil 1 liter ',185">Buy on WhatsApp</a>
-      </div>
-  </article>
-      
-    
-
-    <!-- Pista Badam (Almond) single -->  
-    <article class="card">  
-      <div class="media"><img src="https://i.ibb.co/SGpdhtP/Screenshot-20251102-232811.png" alt="Pista 250g"></div>  
-      <div class="body">  
-        <div class="small">Pista Badam (Almond ) — 250 g</div>  
-        <div class="price">₹240</div>  
-        <div class="bold-note">Buy 4 packets — get 5% off</div>  
-        <div class="small" style="margin-top:6px">Free delivery under 10 km radius</div>  
-        <a class="btn" href="#" onclick="orderWhatsApp('Pista Badam (Almond) 250g',240)">Buy on WhatsApp</a>  
-      </div>  
-    </article> 
-
-
-    <!-- Pista Badam (Almond )4 pack -->  
-    <article class="card">  
-      <div class="media"><img src="https://i.ibb.co/SGpdhtP/Screenshot-20251102-232811.png" alt="Pista 3x250g"></div>  
-      <div class="body">  
-        <div class="small">Pista Badam (Almond )— 250 g × 4 (Buy 4)</div>  
-        <div class="price">₹912 <span style="font-size:12px;color:#666">(5% applied)</span></div>  
-        <div class="small">Free delivery under 10 km</div>  
-        <a class="btn" href="#" onclick="orderWhatsApp('Pista Badam (Almond)4x250g Pack',912)">Buy on WhatsApp</a>  
-      </div>  
-    </article> 
-
-    <!-- Garam masala --> 
-    <article class="card">  
-      <div class="media"><a href="https://ibb.co/bMdrrTsk"><img src="https://i.ibb.co/dwKQQFPR/Screenshot-20251104-001829.png" alt="Screenshot-20251104-001829" border="0"></a>
-        <div class="body">  
-        <div class="small">Garam masala - 50 g</div>
-          <div class="price">₹70</div>
-          <div class="small" style="margin-top:6px">Delivery charges depend on location</div>  
-          <a class="btn" href="#" onclick="orderWhatsApp('Garam masala',70)">Buy on WhatsApp</a>  
-      </div>  
-    </article>
-
-    <!-- White Matar -->
-    <article class="card">  
-      <div class="media"><a href="https://imgbb.com/"><img src="https://i.ibb.co/rGjV7Rq5/Screenshot-20251105-151636.png" alt="Screenshot-20251105-151636" border="0"></a>
-        <div class="body">  
-        <div class="small"> White Matar (Kabli) - 500 g</div>
-          <div class="price">₹45</div>
-          <div class="bold-note">Best quality & excellent in taste</div>
-          <div class="small" style="margin-top:6px">Delivery charges depend on location</div>  
-          <a class="btn" href="#" onclick="orderWhatsApp('White Matar (Kabli)',45)">Buy on WhatsApp</a>  
-      </div>  
-    </article>
-    
-    
-
-    <!-- Sev -->
-    <article class="card">  
-      <div class="media"><a href="https://ibb.co/mVP4Qryn"><img src="https://i.ibb.co/sdXqLp1T/20251104-223036-COLLAGE.jpg" alt="20251104-223036-COLLAGE" border="0"></a>
-        <div class="body">  
-        <div class="small"> Sev - 800g</div>
-          <div class="price">₹120</div>
-          <div class="small" style="margin-top:6px">Delivery charges depend on location</div>  
-          <a class="btn" href="#" onclick="orderWhatsApp('Sev',120)">Buy on WhatsApp</a>  
-      </div>  
-    </article>
-          
-
-  
-    
-  
-    <!-- Besan -->  
-    <article class="card">  
-      <div class="media"><img src="https://i.ibb.co/8DBLRJ8h/Screenshot-20251103-122559.png" alt="Besan 250g"></div>  
-      <div class="body">  
-        <div class="small">Besan — 250 g</div>  
-        <div class="price">₹40</div>  
-        <div class="small" style="margin-top:6px">Delivery charges depend on location</div>  
-        <a class="btn" href="#" onclick="orderWhatsApp('Besan 250g',40)">Buy on WhatsApp</a>  
-      </div>  
-    </article> 
-
-    
-
-    <!-- Arwa chawal -->
-    <article class="card">  
-      <div class="media"><a href="https://ibb.co/DP3TZs4L"><img src="https://i.ibb.co/5XqwPtT2/Screenshot-20251105-103635.png" alt="Screenshot-20251105-103635" border="0"></a>
-        <div class="body">  
-        <div class="small"> Katarni Arwa Chawal - 500 g </div>  
-        <div class="price">₹40</div>  
-        <div class="small" style="margin-top:6px">Delivery charges depend on location</div>  
-        <a class="btn" href="#" onclick="orderWhatsApp('Arwa Chawal 500g',40)">Buy on WhatsApp</a>  
-      </div>  
-    </article> 
-    
-    
-
-    <!-- Combo Dal 250g -->
     <article class="card">
       <div class="media">
         <img src="https://i.ibb.co/bgF2xzvb/20251103-234807-COLLAGE.jpg" alt="Combo Dal 250g Pack">
@@ -352,7 +307,6 @@ function searchProducts() {
       </div>
     </article>
 
-    <!-- Combo Dal 450g -->
     <article class="card">
       <div class="media">
         <img src="https://i.ibb.co/bgF2xzvb/20251103-234807-COLLAGE.jpg" alt="Combo Dal 450g Pack">
@@ -365,9 +319,34 @@ function searchProducts() {
         <a class="btn" href="#" onclick="orderWhatsApp('Combo Dal Pack 450g each',255)">Buy on WhatsApp</a>
       </div>
     </article>
-    
-    <!-- 🛵 Product: Mustard Oil (Sarso Tel) -->
-    <article class="card">  
+
+    <article class="card">
+      <div class="media"><a href="https://ibb.co/DP3TZs4L"><img src="https://i.ibb.co/5XqwPtT2/Screenshot-20251105-103635.png" alt="Screenshot-20251105-103635" border="0"></a>
+        <div class="body">
+        <div class="small"> Katarni Arwa Chawal - 500 g </div>
+        <div class="price">₹40</div>
+        <div class="small" style="margin-top:6px">Delivery charges depend on location</div>
+        <a class="btn" href="#" onclick="orderWhatsApp('Arwa Chawal 500g',40)">Buy on WhatsApp</a>
+      </div>
+    </article>
+
+
+    <h3 style="grid-column: 1 / -1; margin-top: 20px; border-bottom: 2px solid var(--brand); padding-bottom: 5px; color: var(--brand-dark);">
+      🍶 Cooking Oils
+    </h3>
+
+    <article class="card">
+      <div class="media"><a href="https://ibb.co/RGJ5DmNN"><img src="https://i.ibb.co/ymx3Q1pp/Screenshot-20251106-061223.png" alt="Screenshot-20251106-061223" border="0"></a>
+      </div>
+    <div class="body">
+        <div class="small"> Dhara Mustard oil (sarso tel) 1 liter </div>
+        <div class="price">₹185</div>
+        <div class="small" style="margin-top:6px"></div>
+        <a class="btn" href="#" onclick="orderWhatsApp('Dhara Mustard oil 1 liter ',185)">Buy on WhatsApp</a>
+      </div>
+  </article>
+
+    <article class="card">
             <div class="media">
               <img src="https://i.ibb.co/bM5MFRSh/Screenshot-20251104-135622.png" alt="Mustard Oil" style="width: 100%; border-radius: 8px;">
             </div>
@@ -376,17 +355,16 @@ function searchProducts() {
         <div class="price">₹170</div>
         <div class="bold-note">Healthy for daily diet & great in taste</div>
         <div class="small" style="margin-top:6px">Free delivery under 10 km radius</div>
-        <a class="btn" href="#" onclick="orderWhatsApp('Scooter Mustard oil (sarso tel)',255)">Buy on WhatsApp</a>
+        <a class="btn" href="#" onclick="orderWhatsApp('Scooter Mustard oil (sarso tel)',170)">Buy on WhatsApp</a>
       </div>
     </article>
-    
-    <!-- 🛵 Product: Refined Soyabean oil  -->
-    <article class="card">  
+
+    <article class="card">
             <div class="media">
-              <img src=<a href="https://ibb.co/rKYbMFry"><img src="https://i.ibb.co/p6cWZbFX/Screenshot-20251104-233414.png" alt="Screenshot-20251104-233414" border="0"></a>
+              <a href="https://ibb.co/rKYbMFry"><img src="https://i.ibb.co/p6cWZbFX/Screenshot-20251104-233414.png" alt="Screenshot-20251104-233414" border="0"></a>
               </div>
       <div class="body">
-        <div class="small"> Dhara Refined  Soyabean oil 1 liter (750gm) pouch </div>
+        <div class="small"> Dhara Refined Soyabean oil 1 liter (750gm) pouch </div>
         <div class="price">₹140</div>
         <div class="bold-note">Healthy for daily diet & great in taste</div>
         <div class="small" style="margin-top:6px">Free delivery under 10 km radius</div>
@@ -394,38 +372,10 @@ function searchProducts() {
       </div>
     </article>
 
-    
-      <!-- Kismis (Raisins) 750g -->
-<article class="card">
-  <div class="media">
-    <img src="https://i.ibb.co/kgFWXDn6/Screenshot-20251104-103930.png" alt="Kismis 750g">
-  </div>
-  <div class="body">
-    <div class="small">Kismis (Raisins) — 750 g</div>
-    <div class="price">₹385</div>
-    <div class="bold-note">Best Quality • Best in Taste</div>
-    <div class="small" style="margin-top:6px">Free delivery under 10 km radius</div>
-    <a class="btn" href="#" onclick="orderWhatsApp('Kismis (Raisins) 750g',385)">Buy on WhatsApp</a>
-  </div>
-</article>
-    
-    <!--  Kismis (Raisins) 200g -->
-<article class="card">
-  <div class="media">
-    <img src="https://i.ibb.co/kgFWXDn6/Screenshot-20251104-103930.png" alt="Kismis Raisins 200g">
-  </div>
-  <div class="body">
-    <div class="small">Kismis (Raisins) — 200 g</div>
-    <div class="price">₹120</div>
-    <div class="bold-note">Best quality and best in taste</div>
-    <div class="small" style="margin-top:6px">Free delivery under 10 km radius.</div>
-    <a class="btn" href="#" onclick="orderWhatsApp('Kismis Raisins 200g',120)">Buy on WhatsApp</a>
-  </div>
-</article>
 
-    <!-- Cumin (Jeera) Section -->hai 
-<section aria-label="Products">
-  <div class="grid">
+    <h3 style="grid-column: 1 / -1; margin-top: 20px; border-bottom: 2px solid var(--brand); padding-bottom: 5px; color: var(--brand-dark);">
+      🌶️ Spices & Other Groceries
+    </h3>
 
     <article class="card">
       <div class="media">
@@ -440,32 +390,76 @@ function searchProducts() {
       </div>
     </article>
 
-    
-    
-         
-    <!-- 🖤 Premium Black Polythene Section -->
-<section id="polythene" class="product-card">
-  <img src="https://i.ibb.co/SX8510rx/20251104-095102-COLLAGE.jpg" alt="Premium Black Polythene Bag" class="product-image">
-  <h2>Premium Black Polythene (2.5 kg Capacity)</h2>
-  <p><strong>Weight:</strong> 200g</p>
-  <p><strong>Price:</strong> ₹55</p>
-  <p><strong>Quality:</strong> Premium Quality, Durable Material</p>
-  <p><strong>Capacity:</strong> Can hold up to 2.5 kg of dry goods</p>
-  <p><strong>Delivery:</strong> Charges depend on distance</p>
-  <p>Perfect for packaging dry fruits, pulses, or groceries safely.</p>
-  <a class="btn" href="#" onclick="orderWhatsApp('Black polythene 200g ', 55)">Buy on WhatsApp</a>
-  </div>
-</article>
+    <article class="card">
+      <div class="media"><a href="https://ibb.co/FLSP55KZ"><img src="https://i.ibb.co/YFzrcc3n/Screenshot-20251105-230113.png" alt="Screenshot-20251105-230113" border="0"></a>
+        <div class="body">
+        <div class="small"> Jeera (cumin) - 200 g</div>
+          <div class="price">₹70</div>
+          <div class="small" style="margin-top:6px">Delivery charges depend on location</div>
+          <a class="btn" href="#" onclick="orderWhatsApp('Jeera (cumin)',70)">Buy on WhatsApp</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="media"><a href="https://ibb.co/bMdrrTsk"><img src="https://i.ibb.co/dwKQQFPR/Screenshot-20251104-001829.png" alt="Screenshot-20251104-001829" border="0"></a>
+        <div class="body">
+        <div class="small">Garam masala - 50 g</div>
+          <div class="price">₹70</div>
+          <div class="small" style="margin-top:6px">Delivery charges depend on location</div>
+          <a class="btn" href="#" onclick="orderWhatsApp('Garam masala',70)">Buy on WhatsApp</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="media"><img src="https://i.ibb.co/8DBLRJ8h/Screenshot-20251103-122559.png" alt="Besan 250g"></div>
+      <div class="body">
+        <div class="small">Besan — 250 g</div>
+        <div class="price">₹40</div>
+        <div class="small" style="margin-top:6px">Delivery charges depend on location</div>
+        <a class="btn" href="#" onclick="orderWhatsApp('Besan 250g',40)">Buy on WhatsApp</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="media"><a href="https://ibb.co/847Xfrck"><img src="https://i.ibb.co/7N1bZn4h/Screenshot-20251106-063808.png" alt="Screenshot-20251106-063808" border="0"></a>
+        <div class="body">
+        <div class="small"> Horlicks 500g jar</div>
+          <div class="price">₹260</div>
+          <div class="small" style="margin-top:6px">Delivery charges depend on location</div>
+          <a class="btn" href="#" onclick="orderWhatsApp('Horlicks 500g',260)">Buy on WhatsApp</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="media"><a href="https://ibb.co/mVP4Qryn"><img src="https://i.ibb.co/sdXqLp1T/20251104-223036-COLLAGE.jpg" alt="20251104-223036-COLLAGE" border="0"></a>
+        <div class="body">
+        <div class="small"> Sev - 800g</div>
+          <div class="price">₹120</div>
+          <div class="small" style="margin-top:6px">Delivery charges depend on location</div>
+          <a class="btn" href="#" onclick="orderWhatsApp('Sev',120)">Buy on WhatsApp</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="media">
+        <img src="https://i.ibb.co/SX8510rx/20251104-095102-COLLAGE.jpg" alt="Premium Black Polythene Bag">
+      </div>
+      <div class="body">
+        <div class="small">Premium Black Polythene (2.5 kg Capacity) — 200g</div>
+        <div class="price">₹55</div>
+        <div class="bold-note">Premium Quality, Durable Material</div>
+        <div class="small" style="margin-top:6px">Delivery charges depend on location</div>
+        <a class="btn" href="#" onclick="orderWhatsApp('Black polythene 200g ', 55)">Buy on WhatsApp</a>
+      </div>
+    </article>
 
   </div>  
 </section>  
 
-<!-- Reviews & Rating -->  
 <section class="info" id="reviewsSection">  
   <h3 style="margin:0 0 8px 0">Customer Reviews <span id="avgStars" style="margin-left:10px;color:#e59600;font-weight:800"></span></h3>  
   <div class="reviews" id="reviewList" aria-live="polite">  
-    <!-- reviews injected here -->  
-  </div>  
+    </div>  
 
   <div style="margin-top:10px;text-align:left;max-width:560px;margin-left:auto;margin-right:auto">  
     <label for="ratingSelect"><strong>Your rating:</strong></label><br>  
@@ -593,4 +587,5 @@ function searchProducts() {
     // initial render  
     renderReviews();  
   </script>  </body>  
-</html>  
+</html>
+ 
