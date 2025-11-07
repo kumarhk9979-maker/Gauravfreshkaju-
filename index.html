@@ -5,10 +5,10 @@
   <meta charset="utf-8" />  
   <meta name="viewport" content="width=device-width,initial-scale=1" />  
   <meta name="google-site-verification" content="iBJh_cAHkQBIxjozI7xL-Wjohzvp1deaG5Ak7PUWsYo" />    
-  <meta name="keywords" content="GAURAV STORE, dry fruits, kaju, Almond(Pista Badam), besan, buy dry fruits online" />  
-  <title>Gaurav Store — Fresh Dry Fruits, Pulses & Spices</title>
-<meta name="description" content="Buy best quality Kaju,  Almond(Badam), Daal, Jeera and more from Gaurav Store. Free delivery under 100 km radius. Order now on WhatsApp.">
-<meta name="keywords" content="Gaurav Store, Fresh Kaju, Almond(Badam), Pulses, Jeera, Online Store, Local Delivery">
+  <meta name="keywords" content="GAURAV STORE, dry fruits, kaju, Almond(Pista Badam), besan, buy dry fruits online, dal, masale, pulses" />  
+  <title>GAURAV STORE | Premium Dry Fruits, Daal & Masale | Same-Day Delivery</title>
+<meta name="description" content="Buy Best Quality Kaju, Almond(Badam), Daal, Jeera and more from Gaurav Store. Get Same-Day Free Delivery under 10 km. Order now on WhatsApp.">
+<meta name="keywords" content="Gaurav Store, Fresh Kaju, Almond(Badam), Pulses, Jeera, Online Store, Local Delivery, Free Delivery, Best Quality">
 <meta name="robots" content="index, follow" />
 <meta name="googlebot" content="index, follow" />
 <meta property="og:url" content="https://<tumhara-site-link>.github.io/" />
@@ -84,7 +84,15 @@
     select{padding:8px;border-radius:8px;border:1px solid #ddd;margin-bottom:8px}  
     button.submit{background:var(--brand);color:#fff;padding:8px 12px;border-radius:8px;border:none;font-weight:700;cursor:pointer}  
     footer{margin-top:20px;padding:14px;text-align:center;color:#5b3f14;font-size:13px}  
-    @media(max-width:420px){.media img{height:100px}} /* On very small screens, make image even smaller */
+    
+    /* ADDED: Mobile-specific 2-column grid for Flipkart-like view */
+    @media(max-width:600px){
+      .grid {
+        grid-template-columns: repeat(2, 1fr); /* Exactly two columns for smaller screens */
+        gap: 8px; /* Slightly tighter gap on small screens */
+      }
+      .media img{height:100px} /* On small screens, reduce image height for better fit */
+    }
   </style>  </head>  
 <body>  
 <style>
@@ -318,7 +326,7 @@ function searchProducts() {
       </article>
 
         <article class="card">
-      <div class="media"><img src="https://imgbb.com/"><img src="https://i.ibb.co/ymGY0vWW/Screenshot-20251107-080012.png" alt="Moong dal 500g"></div>
+      <div class="media"><img src="https://i.ibb.co/ymGY0vWW/Screenshot-20251107-080012.png" alt="Moong dal 500g"></div>
         <div class="body">
           <div class="small"> Moong dal 500g </div>
           <div class="price">₹65</div>
@@ -329,7 +337,7 @@ function searchProducts() {
         </article>
 
     <article class="card">
-      <div class="media"><img src= <a href="https://imgbb.com/"><img src="https://i.ibb.co/fGXnB7cQ/Screenshot-20251107-080646.png" alt="Chana dal 500g"></div>
+      <div class="media"><img src="https://i.ibb.co/fGXnB7cQ/Screenshot-20251107-080646.png" alt="Chana dal 500g"></div>
         <div class="body">
           <div class="small"> Chana dal 500g </div>
           <div class="price">₹50</div>
@@ -357,7 +365,7 @@ function searchProducts() {
 
 
         <article class="card">
-      <div class="media"><img src="https://ibb.co/hFBGtG6K"><img src="https://i.ibb.co/s9KTMTfF/Screenshot-20251106-163204.png" alt="Chana - 500g"></div>
+      <div class="media"><img src="https://i.ibb.co/s9KTMTfF/Screenshot-20251106-163204.png" alt="Chana - 500g"></div>
         <div class="body">
           <div class="small"> Chana- 500 g</div>
           <div class="price">₹45</div>
@@ -477,7 +485,7 @@ function searchProducts() {
     </article>
 
     <article class="card">
-      <div class="media"><img src="https://imgbb.com/"><img src="https://i.ibb.co/bMwXNx1x/Screenshot-20251107-083748.png" alt="Ajwain - 500 g"></div>
+      <div class="media"><img src="https://i.ibb.co/bMwXNx1x/Screenshot-20251107-083748.png" alt="Ajwain - 500 g"></div>
         <div class="body">
         <div class="small"> Ajwain - 500 g</div>
           <div class="price">₹120</div>
@@ -489,7 +497,7 @@ function searchProducts() {
 
         <article class="card">
       <div class="media">
-        <img src="https://imgbb.com/"><img src="https://i.ibb.co/S4H2ZTyG/Screenshot-20251107-081713.png"  alt="Kali mirch 100g">
+        <img src="https://i.ibb.co/S4H2ZTyG/Screenshot-20251107-081713.png"  alt="Kali mirch 100g">
       </div>
       <div class="body">
         <div class="small">Kali mirch (Black pepper) —100 g</div>
@@ -556,7 +564,7 @@ function searchProducts() {
     </article>
 
     <article class="card">
-      <div class="media"><img src="https://ibb.co/mCLQq5Df"><img src="https://i.ibb.co/sv0Lw9m8/Screenshot-20251107-083041.png" alt="Sev - 800g"></div>
+      <div class="media"><img src="https://i.ibb.co/sv0Lw9m8/Screenshot-20251107-083041.png" alt="Sonpapdi 450g"></div>
         <div class="body">
         <div class="small"> Sonpapdi 450g</div>
           <div class="price">₹110</div>
@@ -715,6 +723,7 @@ function searchProducts() {
     renderReviews();  
   </script>  </body>  
 </html>
+
 
 
 
