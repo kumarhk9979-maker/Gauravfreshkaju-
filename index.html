@@ -5,16 +5,16 @@
   <meta charset="utf-8" />  
   <meta name="viewport" content="width=device-width,initial-scale=1" />  
   <meta name="google-site-verification" content="iBJh_cAHkQBIxjozI7xL-Wjohzvp1deaG5Ak7PUWsYo" />    
-  <meta name="keywords" content="GAURAV STORE, dry fruits, kaju, Almond(Pista Badam), besan, buy dry fruits online, dal, masale, pulses" />  
-  <title>GAURAV STORE | Premium Dry Fruits, Daal & Masale | Same-Day Delivery</title>
-<meta name="description" content="Buy Best Quality Kaju, Almond(Badam), Daal, Jeera and more from Gaurav Store. Get Same-Day Free Delivery under 10 km. Order now on WhatsApp.">
-<meta name="keywords" content="Gaurav Store, Fresh Kaju, Almond(Badam), Pulses, Jeera, Online Store, Local Delivery, Free Delivery, Best Quality">
+  <meta name="keywords" content="GAURAV STORE, dry fruits, kaju, Almond(Pista Badam), besan, buy dry fruits online, dal, masale, pulses, Paliganj, Patna, Cooking Oil, Mustard Oil, Sarso Tel, Zip Lock Bags" />  
+  <title>GAURAV STORE (Paliganj, Patna) | Premium Dry Fruits, Daal, Masale & Cooking Oil | Same-Day Delivery</title>
+<meta name="description" content="Buy Best Quality Kaju, Almond(Badam), Daal, Jeera and most trusted Cooking Oils from Gaurav Store in Paliganj, Patna. Get Same-Day Free Delivery under 10 km. Order now on WhatsApp.">
+<meta name="keywords" content="Gaurav Store, Fresh Kaju, Almond(Badam), Pulses, Cooking Oil, Mustard Oil, Sarso Tel, Jeera, Online Store, Local Delivery, Free Delivery, Best Quality, Paliganj, Patna">
 <meta name="robots" content="index, follow" />
 <meta name="googlebot" content="index, follow" />
 <meta property="og:url" content="https://<tumhara-site-link>.github.io/" />
 <link rel="canonical" href="https://<tumhara-site-link>.github.io/" />
   <meta name="author" content="Gaurav Kumar" />  
-  <meta property="og:title" content="GAURAV STORE | Premium Dry Fruits & Groceries" />  
+  <meta property="og:title" content="GAURAV STORE | Premium Dry Fruits & Groceries (Paliganj, Patna)" />  
   <meta property="og:description" content="Get ₹50 Discount + Surprise Gift on Orders Above ₹1000!" />  
   <meta property="og:image" content="" /> 
   <meta property="og:type" content="website" />    <style>  
@@ -85,13 +85,14 @@
     button.submit{background:var(--brand);color:#fff;padding:8px 12px;border-radius:8px;border:none;font-weight:700;cursor:pointer}  
     footer{margin-top:20px;padding:14px;text-align:center;color:#5b3f14;font-size:13px}  
     
-    /* ADDED: Mobile-specific 2-column grid for Flipkart-like view */
+    /* UPDATED: Mobile-specific 2-column grid with compact cards */
     @media(max-width:600px){
       .grid {
         grid-template-columns: repeat(2, 1fr); /* Exactly two columns for smaller screens */
         gap: 8px; /* Slightly tighter gap on small screens */
       }
-      .media img{height:100px} /* On small screens, reduce image height for better fit */
+      .media img{height:90px} /* Image height drastically reduced for compact mobile view */
+      .body{padding:6px;} /* Mobile par padding ko bhi kam kiya gaya */
     }
   </style>  </head>  
 <body>  
@@ -219,68 +220,110 @@ function searchProducts() {
       🌰 Dry Fruits
     </h3>
 
-    <article class="card">
-      <div class="media"><img src="https://i.ibb.co/3mbcBk2t/Screenshot-20251102-121611.png" alt="Kaju 250g"></div>
+    <article class="card" itemscope itemtype="http://schema.org/Product">
+      <meta itemprop="sku" content="GS-KAJU250G">
+      <div class="media"><img itemprop="image" src="https://i.ibb.co/3mbcBk2t/Screenshot-20251102-121611.png" alt="Kaju 250g"></div>
       <div class="body">
-        <div class="small">Kaju — 250 g</div>
-        <div class="price">₹250</div>
+        <div class="small" itemprop="name">Kaju — 250 g</div>
+        <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+            <div class="price">
+                <span itemprop="priceCurrency" content="INR">₹</span>
+                <span itemprop="price" content="250">250</span>
+            </div>
+            <meta itemprop="availability" content="http://schema.org/InStock" />
+        </div>
         <div class="bold-note">Buy 4 packets — get 5% off</div>
         <div class="small" style="margin-top:6px">Free delivery under 10 km</div>
         <a class="btn" href="#" onclick="orderWhatsApp('Kaju 250g',250)">Buy on WhatsApp</a>
       </div>
     </article>
 
-    <article class="card">
-      <div class="media"><img src="https://i.ibb.co/3mbcBk2t/Screenshot-20251102-121611.png" alt="Kaju 3x250g"></div>
+    <article class="card" itemscope itemtype="http://schema.org/Product">
+      <meta itemprop="sku" content="GS-KAJU4X250G">
+      <div class="media"><img itemprop="image" src="https://i.ibb.co/3mbcBk2t/Screenshot-20251102-121611.png" alt="Kaju 4x250g"></div>
       <div class="body">
-        <div class="small">Kaju — 250 g × 4 (Buy 4)</div>
-        <div class="price">₹950 <span style="font-size:12px;color:#666"> (5% applied)</span></div>
+        <div class="small" itemprop="name">Kaju — 250 g × 4 (Buy 4)</div>
+        <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+            <div class="price">
+                <span itemprop="priceCurrency" content="INR">₹</span>
+                <span itemprop="price" content="950">950</span>
+            </div>
+            <meta itemprop="availability" content="http://schema.org/InStock" />
+        </div>
         <div class="small">Free delivery under 10 km</div>
         <a class="btn" href="#" onclick="orderWhatsApp('Kaju 4x250g Pack',950)">Buy on WhatsApp</a>
       </div>
     </article>
 
-    <article class="card">
-      <div class="media"><img src="https://i.ibb.co/SGpdhtP/Screenshot-20251102-232811.png" alt="Pista 250g"></div>
+    <article class="card" itemscope itemtype="http://schema.org/Product">
+      <meta itemprop="sku" content="GS-PISTA250G">
+      <div class="media"><img itemprop="image" src="https://i.ibb.co/SGpdhtP/Screenshot-20251102-232811.png" alt="Pista 250g"></div>
       <div class="body">
-        <div class="small">Pista Badam (Almond ) — 250 g</div>
-        <div class="price">₹240</div>
+        <div class="small" itemprop="name">Pista Badam (Almond ) — 250 g</div>
+        <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+            <div class="price">
+                <span itemprop="priceCurrency" content="INR">₹</span>
+                <span itemprop="price" content="240">240</span>
+            </div>
+            <meta itemprop="availability" content="http://schema.org/InStock" />
+        </div>
         <div class="bold-note">Buy 4 packets — get 5% off</div>
         <div class="small" style="margin-top:6px">Free delivery under 10 km radius</div>
         <a class="btn" href="#" onclick="orderWhatsApp('Pista Badam (Almond) 250g',240)">Buy on WhatsApp</a>
       </div>
     </article>
 
-    <article class="card">
-      <div class="media"><img src="https://i.ibb.co/SGpdhtP/Screenshot-20251102-232811.png" alt="Pista 3x250g"></div>
+    <article class="card" itemscope itemtype="http://schema.org/Product">
+      <meta itemprop="sku" content="GS-PISTA4X250G">
+      <div class="media"><img itemprop="image" src="https://i.ibb.co/SGpdhtP/Screenshot-20251102-232811.png" alt="Pista 3x250g"></div>
       <div class="body">
-        <div class="small">Pista Badam (Almond )— 250 g × 4 (Buy 4)</div>
-        <div class="price">₹912 <span style="font-size:12px;color:#666">(5% applied)</span></div>
+        <div class="small" itemprop="name">Pista Badam (Almond )— 250 g × 4 (Buy 4)</div>
+        <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+            <div class="price">
+                <span itemprop="priceCurrency" content="INR">₹</span>
+                <span itemprop="price" content="912">912</span>
+            </div>
+            <meta itemprop="availability" content="http://schema.org/InStock" />
+        </div>
         <div class="small">Free delivery under 10 km</div>
         <a class="btn" href="#" onclick="orderWhatsApp('Pista Badam (Almond)4x250g Pack',912)">Buy on WhatsApp</a>
       </div>
     </article>
 
-    <article class="card">
+    <article class="card" itemscope itemtype="http://schema.org/Product">
+      <meta itemprop="sku" content="GS-KISMIS750G">
       <div class="media">
-        <img src="https://i.ibb.co/kgFWXDn6/Screenshot-20251104-103930.png" alt="Kismis 750g">
+        <img itemprop="image" src="https://i.ibb.co/kgFWXDn6/Screenshot-20251104-103930.png" alt="Kismis 750g">
       </div>
       <div class="body">
-        <div class="small">Kismis (Raisins) — 750 g</div>
-        <div class="price">₹385</div>
+        <div class="small" itemprop="name">Kismis (Raisins) — 750 g</div>
+        <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+            <div class="price">
+                <span itemprop="priceCurrency" content="INR">₹</span>
+                <span itemprop="price" content="385">385</span>
+            </div>
+            <meta itemprop="availability" content="http://schema.org/InStock" />
+        </div>
         <div class="bold-note">Best Quality • Best in Taste</div>
         <div class="small" style="margin-top:6px">Free delivery under 10 km radius</div>
         <a class="btn" href="#" onclick="orderWhatsApp('Kismis (Raisins) 750g',385)">Buy on WhatsApp</a>
       </div>
     </article>
 
-    <article class="card">
+    <article class="card" itemscope itemtype="http://schema.org/Product">
+      <meta itemprop="sku" content="GS-KISMIS200G">
       <div class="media">
-        <img src="https://i.ibb.co/kgFWXDn6/Screenshot-20251104-103930.png" alt="Kismis Raisins 200g">
+        <img itemprop="image" src="https://i.ibb.co/kgFWXDn6/Screenshot-20251104-103930.png" alt="Kismis Raisins 200g">
       </div>
       <div class="body">
-        <div class="small">Kismis (Raisins) — 200 g</div>
-        <div class="price">₹120</div>
+        <div class="small" itemprop="name">Kismis (Raisins) — 200 g</div>
+        <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+            <div class="price">
+                <span itemprop="priceCurrency" content="INR">₹</span>
+                <span itemprop="price" content="120">120</span>
+            </div>
+            <meta itemprop="availability" content="http://schema.org/InStock" />
+        </div>
         <div class="bold-note">Best quality and best in taste</div>
         <div class="small" style="margin-top:6px">Free delivery under 10 km radius.</div>
         <a class="btn" href="#" onclick="orderWhatsApp('Kismis Raisins 200g',120)">Buy on WhatsApp</a>
@@ -292,55 +335,90 @@ function searchProducts() {
       🥣 Dal, Pulses & Cereals
     </h3>
     
-    <article class="card">
-      <div class="media"><img src="https://i.ibb.co/9mKRHr9G/Screenshot-20251106-113643.png" alt="Arhar Dal 500g"></div>
+    <article class="card" itemscope itemtype="http://schema.org/Product">
+      <meta itemprop="sku" content="GS-ARHAR500G">
+      <div class="media"><img itemprop="image" src="https://i.ibb.co/9mKRHr9G/Screenshot-20251106-113643.png" alt="Arhar Dal 500g"></div>
       <div class="body">
-        <div class="small">Arhar Dal (Toor Dal) — 500 g</div>
-        <div class="price">₹70</div>
+        <div class="small" itemprop="name">Arhar Dal (Toor Dal) — 500 g</div>
+        <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+            <div class="price">
+                <span itemprop="priceCurrency" content="INR">₹</span>
+                <span itemprop="price" content="70">70</span>
+            </div>
+            <meta itemprop="availability" content="http://schema.org/InStock" />
+        </div>
         <div class="bold-note">Excellent Taste & Quality</div>
         <div class="small" style="margin-top:6px">Delivery charges depend on location</div>
         <a class="btn" href="#" onclick="orderWhatsApp('Arhar Dal (Toor Dal) 500g',70)">Buy on WhatsApp</a>
       </div>
     </article>
 
-    <article class="card">
-      <div class="media"><img src="https://i.ibb.co/bgzL5vp7/Screenshot-20251106-220701.png" alt="Keshari Dal 500g"></div>
+    <article class="card" itemscope itemtype="http://schema.org/Product">
+      <meta itemprop="sku" content="GS-KESHARI500G">
+      <div class="media"><img itemprop="image" src="https://i.ibb.co/bgzL5vp7/Screenshot-20251106-220701.png" alt="Keshari Dal 500g"></div>
       <div class="body">
-        <div class="small">Keshari Dal (Kesari Dal) — 500 g</div>
-        <div class="price">₹45</div>
+        <div class="small" itemprop="name">Keshari Dal (Kesari Dal) — 500 g</div>
+        <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+            <div class="price">
+                <span itemprop="priceCurrency" content="INR">₹</span>
+                <span itemprop="price" content="45">45</span>
+            </div>
+            <meta itemprop="availability" content="http://schema.org/InStock" />
+        </div>
         <div class="bold-note">Best Quality & Taste</div>
         <div class="small" style="margin-top:6px">Delivery charges depend on location</div>
         <a class="btn" href="#" onclick="orderWhatsApp('Keshari Dal (Kesari Dal) 500g',45)">Buy on WhatsApp</a>
       </div>
     </article>
 
-    <article class="card">
-      <div class="media"><img src="https://i.ibb.co/PSCg9Pz/Screenshot-20251106-070144.png" alt="Masoor dal 1 kg"></div>
+    <article class="card" itemscope itemtype="http://schema.org/Product">
+      <meta itemprop="sku" content="GS-MASOOR1KG">
+      <div class="media"><img itemprop="image" src="https://i.ibb.co/PSCg9Pz/Screenshot-20251106-070144.png" alt="Masoor dal 1 kg"></div>
         <div class="body">
-          <div class="small"> Masoor dal 1 kg </div>
-          <div class="price">₹90</div>
+          <div class="small" itemprop="name"> Masoor dal 1 kg </div>
+          <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+              <div class="price">
+                  <span itemprop="priceCurrency" content="INR">₹</span>
+                  <span itemprop="price" content="90">90</span>
+              </div>
+              <meta itemprop="availability" content="http://schema.org/InStock" />
+          </div>
           <div class="bold-note">Excellent Taste & Quality</div>
           <div class="small" style="margin-top:6px">Delivery charges depend on location</div>
           <a class="btn" href="#" onclick="orderWhatsApp('Masoor dal 1 kg',90)">Buy on WhatsApp</a>
         </div>
       </article>
 
-        <article class="card">
-      <div class="media"><img src="https://i.ibb.co/ymGY0vWW/Screenshot-20251107-080012.png" alt="Moong dal 500g"></div>
+    <article class="card" itemscope itemtype="http://schema.org/Product">
+      <meta itemprop="sku" content="GS-MOONG500G">
+      <div class="media"><img itemprop="image" src="https://i.ibb.co/ymGY0vWW/Screenshot-20251107-080012.png" alt="Moong dal 500g"></div>
         <div class="body">
-          <div class="small"> Moong dal 500g </div>
-          <div class="price">₹65</div>
+          <div class="small" itemprop="name"> Moong dal 500g </div>
+          <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+              <div class="price">
+                  <span itemprop="priceCurrency" content="INR">₹</span>
+                  <span itemprop="price" content="65">65</span>
+              </div>
+              <meta itemprop="availability" content="http://schema.org/InStock" />
+          </div>
           <div class="bold-note">Excellent Taste & Quality</div>
           <div class="small" style="margin-top:6px">Delivery charges depend on location</div>
           <a class="btn" href="#" onclick="orderWhatsApp('Moong dal 500g',65)">Buy on WhatsApp</a>
         </div>
-        </article>
+    </article>
 
-    <article class="card">
-      <div class="media"><img src="https://i.ibb.co/fGXnB7cQ/Screenshot-20251107-080646.png" alt="Chana dal 500g"></div>
+    <article class="card" itemscope itemtype="http://schema.org/Product">
+      <meta itemprop="sku" content="GS-CHANA500G">
+      <div class="media"><img itemprop="image" src="https://i.ibb.co/fGXnB7cQ/Screenshot-20251107-080646.png" alt="Chana dal 500g"></div>
         <div class="body">
-          <div class="small"> Chana dal 500g </div>
-          <div class="price">₹50</div>
+          <div class="small" itemprop="name"> Chana dal 500g </div>
+          <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+              <div class="price">
+                  <span itemprop="priceCurrency" content="INR">₹</span>
+                  <span itemprop="price" content="50">50</span>
+              </div>
+              <meta itemprop="availability" content="http://schema.org/InStock" />
+          </div>
           <div class="bold-note">Excellent Taste & Quality</div>
           <div class="small" style="margin-top:6px">Delivery charges depend on location</div>
           <a class="btn" href="#" onclick="orderWhatsApp('Chana dal 500g',50)">Buy on WhatsApp</a>
@@ -348,15 +426,18 @@ function searchProducts() {
     </article>
 
 
-    
-
-    
-
-    <article class="card">
-      <div class="media"><img src="https://i.ibb.co/rGjV7Rq5/Screenshot-20251105-151636.png" alt="White Matar (Kabli) - 500 g"></div>
+    <article class="card" itemscope itemtype="http://schema.org/Product">
+      <meta itemprop="sku" content="GS-WHITMAT500G">
+      <div class="media"><img itemprop="image" src="https://i.ibb.co/rGjV7Rq5/Screenshot-20251105-151636.png" alt="White Matar (Kabli) - 500 g"></div>
         <div class="body">
-          <div class="small"> White Matar (Kabli) - 500 g</div>
-          <div class="price">₹45</div>
+          <div class="small" itemprop="name"> White Matar (Kabli) - 500 g</div>
+          <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+              <div class="price">
+                  <span itemprop="priceCurrency" content="INR">₹</span>
+                  <span itemprop="price" content="45">45</span>
+              </div>
+              <meta itemprop="availability" content="http://schema.org/InStock" />
+          </div>
           <div class="bold-note">Best quality & excellent in taste</div>
           <div class="small" style="margin-top:6px">Delivery charges depend on location</div>
           <a class="btn" href="#" onclick="orderWhatsApp('White Matar (Kabli) 500g',45)">Buy on WhatsApp</a>
@@ -364,60 +445,95 @@ function searchProducts() {
       </article>
 
 
-        <article class="card">
-      <div class="media"><img src="https://i.ibb.co/s9KTMTfF/Screenshot-20251106-163204.png" alt="Chana - 500g"></div>
+    <article class="card" itemscope itemtype="http://schema.org/Product">
+      <meta itemprop="sku" content="GS-CHANAW500G">
+      <div class="media"><img itemprop="image" src="https://i.ibb.co/s9KTMTfF/Screenshot-20251106-163204.png" alt="Chana - 500g"></div>
         <div class="body">
-          <div class="small"> Chana- 500 g</div>
-          <div class="price">₹45</div>
+          <div class="small" itemprop="name"> Chana- 500 g</div>
+          <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+              <div class="price">
+                  <span itemprop="priceCurrency" content="INR">₹</span>
+                  <span itemprop="price" content="45">45</span>
+              </div>
+              <meta itemprop="availability" content="http://schema.org/InStock" />
+          </div>
           <div class="bold-note">Best quality & excellent in taste</div>
           <div class="small" style="margin-top:6px">Delivery charges depend on location</div>
           <a class="btn" href="#" onclick="orderWhatsApp('chana 500g',45)">Buy on WhatsApp</a>
         </div>
-        </article>
+    </article>
     
 
-    <article class="card">
-      <div class="media"><img src="https://i.ibb.co/ZphMGHZW/Screenshot-20251105-154457.png" alt="Soyabean — 500g"></div>
+    <article class="card" itemscope itemtype="http://schema.org/Product">
+      <meta itemprop="sku" content="GS-SOYABEAN500G">
+      <div class="media"><img itemprop="image" src="https://i.ibb.co/ZphMGHZW/Screenshot-20251105-154457.png" alt="Soyabean — 500g"></div>
               <div class="body">
-        <div class="small"> Soyabean — 500g</div>
-        <div class="price">₹55</div>
+        <div class="small" itemprop="name"> Soyabean — 500g</div>
+        <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+            <div class="price">
+                <span itemprop="priceCurrency" content="INR">₹</span>
+                <span itemprop="price" content="55">55</span>
+            </div>
+            <meta itemprop="availability" content="http://schema.org/InStock" />
+        </div>
         <div class="bold-note">Medium size cutting , best quality soyabean</div>
         <div class="small" style="margin-top:6px">Free delivery under 10 km radius</div>
         <a class="btn" href="#" onclick="orderWhatsApp('Soyabean 500g',55)">Buy on WhatsApp</a>
       </div>
-      </article>
+    </article>
 
-    <article class="card">
+    <article class="card" itemscope itemtype="http://schema.org/Product">
+      <meta itemprop="sku" content="GS-DALCOMBO250G">
       <div class="media">
-        <img src="https://i.ibb.co/bgF2xzvb/20251103-234807-COLLAGE.jpg" alt="Combo Dal 250g Pack">
+        <img itemprop="image" src="https://i.ibb.co/bgF2xzvb/20251103-234807-COLLAGE.jpg" alt="Combo Dal 250g Pack">
       </div>
       <div class="body">
-        <div class="small">Combo Pack — 250g of each Daal (Moong, Masoor, Arhar, Chana)</div>
-        <div class="price">₹150</div>
+        <div class="small" itemprop="name">Combo Pack — 250g of each Daal (Moong, Masoor, Arhar, Chana)</div>
+        <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+            <div class="price">
+                <span itemprop="priceCurrency" content="INR">₹</span>
+                <span itemprop="price" content="150">150</span>
+            </div>
+            <meta itemprop="availability" content="http://schema.org/InStock" />
+        </div>
         <div class="bold-note">Best quality & excellent taste</div>
         <div class="small" style="margin-top:6px">Free delivery under 10 km radius</div>
         <a class="btn" href="#" onclick="orderWhatsApp('Combo Dal Pack 250g each',150)">Buy on WhatsApp</a>
       </div>
     </article>
 
-    <article class="card">
+    <article class="card" itemscope itemtype="http://schema.org/Product">
+      <meta itemprop="sku" content="GS-DALCOMBO450G">
       <div class="media">
-        <img src="https://i.ibb.co/bgF2xzvb/20251103-234807-COLLAGE.jpg" alt="Combo Dal 450g Pack">
+        <img itemprop="image" src="https://i.ibb.co/bgF2xzvb/20251103-234807-COLLAGE.jpg" alt="Combo Dal 450g Pack">
       </div>
       <div class="body">
-        <div class="small">Combo Pack — 450g of each Daal (Moong, Masoor, Arhar, Chana)</div>
-        <div class="price">₹255</div>
+        <div class="small" itemprop="name">Combo Pack — 450g of each Daal (Moong, Masoor, Arhar, Chana)</div>
+        <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+            <div class="price">
+                <span itemprop="priceCurrency" content="INR">₹</span>
+                <span itemprop="price" content="255">255</span>
+            </div>
+            <meta itemprop="availability" content="http://schema.org/InStock" />
+        </div>
         <div class="bold-note">Healthy for daily diet & great in taste</div>
         <div class="small" style="margin-top:6px">Free delivery under 10 km radius</div>
         <a class="btn" href="#" onclick="orderWhatsApp('Combo Dal Pack 450g each',255)">Buy on WhatsApp</a>
       </div>
     </article>
 
-    <article class="card">
-      <div class="media"><img src="https://i.ibb.co/5XqwPtT2/Screenshot-20251105-103635.png" alt="Katarni Arwa Chawal - 500 g"></div>
+    <article class="card" itemscope itemtype="http://schema.org/Product">
+      <meta itemprop="sku" content="GS-CHAWAL500G">
+      <div class="media"><img itemprop="image" src="https://i.ibb.co/5XqwPtT2/Screenshot-20251105-103635.png" alt="Katarni Arwa Chawal - 500 g"></div>
         <div class="body">
-        <div class="small"> Katarni Arwa Chawal - 500 g </div>
-        <div class="price">₹40</div>
+        <div class="small" itemprop="name"> Katarni Arwa Chawal - 500 g </div>
+        <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+            <div class="price">
+                <span itemprop="priceCurrency" content="INR">₹</span>
+                <span itemprop="price" content="40">40</span>
+            </div>
+            <meta itemprop="availability" content="http://schema.org/InStock" />
+        </div>
         <div class="bold-note">Excellent Taste & Quality</div>
         <div class="small" style="margin-top:6px">Delivery charges depend on location</div>
         <a class="btn" href="#" onclick="orderWhatsApp('Arwa Chawal 500g',40)">Buy on WhatsApp</a>
@@ -426,41 +542,62 @@ function searchProducts() {
 
 
     <h3 style="grid-column: 1 / -1; margin-top: 20px; border-bottom: 2px solid var(--brand); padding-bottom: 5px; color: var(--brand-dark);">
-      🍶 Cooking Oils
+      🍶 Cooking Oils (Khanne Ka Tel)
     </h3>
 
-    <article class="card">
-      <div class="media"><img src="https://i.ibb.co/ymx3Q1pp/Screenshot-20251106-061223.png" alt="Dhara Mustard oil 1 liter"></div>
+    <article class="card" itemscope itemtype="http://schema.org/Product">
+      <meta itemprop="sku" content="GS-DHARAMUST1L">
+      <div class="media"><img itemprop="image" src="https://i.ibb.co/ymx3Q1pp/Screenshot-20251106-061223.png" alt="Dhara Mustard oil 1 liter"></div>
     <div class="body">
-        <div class="small"> Dhara Mustard oil (sarso tel) 1 liter </div>
-        <div class="price">₹185</div>
+        <div class="small" itemprop="name"> Dhara Cooking Oil (Mustard / Sarso Tel) 1 liter </div>
+        <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+            <div class="price">
+                <span itemprop="priceCurrency" content="INR">₹</span>
+                <span itemprop="price" content="185">185</span>
+            </div>
+            <meta itemprop="availability" content="http://schema.org/InStock" />
+        </div>
         <div class="bold-note">Quality & Freshness Guaranteed</div>
         <div class="small" style="margin-top:6px">Delivery charges depend on location</div>
-        <a class="btn" href="#" onclick="orderWhatsApp('Dhara Mustard oil 1 liter ',185)">Buy on WhatsApp</a>
+        <a class="btn" href="#" onclick="orderWhatsApp('Dhara Cooking Oil (Mustard) 1 liter ',185)">Buy on WhatsApp</a>
       </div>
   </article>
 
-    <article class="card">
+    <article class="card" itemscope itemtype="http://schema.org/Product">
+      <meta itemprop="sku" content="GS-SCOOTERMUST1L">
             <div class="media">
-              <img src="https://i.ibb.co/bM5MFRSh/Screenshot-20251104-135622.png" alt="Mustard Oil" style="width: 100%; border-radius: 8px;">
+              <img itemprop="image" src="https://i.ibb.co/bM5MFRSh/Screenshot-20251104-135622.png" alt="Mustard Oil" style="width: 100%; border-radius: 8px;">
             </div>
       <div class="body">
-        <div class="small"> Scooter Mustard oil 1 liter packet (sarso tel)</div>
-        <div class="price">₹170</div>
+        <div class="small" itemprop="name"> Scooter Cooking Oil (Mustard / Sarso Tel) 1 liter packet</div>
+        <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+            <div class="price">
+                <span itemprop="priceCurrency" content="INR">₹</span>
+                <span itemprop="price" content="170">170</span>
+            </div>
+            <meta itemprop="availability" content="http://schema.org/InStock" />
+        </div>
         <div class="bold-note">Healthy for daily diet & great in taste</div>
         <div class="small" style="margin-top:6px">Free delivery under 10 km radius</div>
-        <a class="btn" href="#" onclick="orderWhatsApp('Scooter Mustard oil (sarso tel)',170)">Buy on WhatsApp</a>
+        <a class="btn" href="#" onclick="orderWhatsApp('Scooter Cooking Oil (Mustard)',170)">Buy on WhatsApp</a>
       </div>
     </article>
 
-    <article class="card">
-            <div class="media"><img src="https://i.ibb.co/p6cWZbFX/Screenshot-20251104-233414.png" alt="Dhara Refined Soyabean oil 1 liter"></div>
+    <article class="card" itemscope itemtype="http://schema.org/Product">
+      <meta itemprop="sku" content="GS-DHARA-SOY1L">
+            <div class="media"><img itemprop="image" src="https://i.ibb.co/p6cWZbFX/Screenshot-20251104-233414.png" alt="Dhara Refined Soyabean oil 1 liter"></div>
       <div class="body">
-        <div class="small"> Dhara Refined Soyabean oil 1 liter (750gm) pouch </div>
-        <div class="price">₹140</div>
+        <div class="small" itemprop="name"> Dhara Refined Cooking Oil (Soyabean) 1 liter pouch </div>
+        <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+            <div class="price">
+                <span itemprop="priceCurrency" content="INR">₹</span>
+                <span itemprop="price" content="140">140</span>
+            </div>
+            <meta itemprop="availability" content="http://schema.org/InStock" />
+        </div>
         <div class="bold-note">Healthy for daily diet & great in taste</div>
         <div class="small" style="margin-top:6px">Free delivery under 10 km radius</div>
-        <a class="btn" href="#" onclick="orderWhatsApp('Dhara Refined  Soyabean',140)">Buy on WhatsApp</a>
+        <a class="btn" href="#" onclick="orderWhatsApp('Dhara Refined Cooking Oil (Soyabean)',140)">Buy on WhatsApp</a>
       </div>
     </article>
 
@@ -471,103 +608,166 @@ function searchProducts() {
 
     
     
-    <article class="card">
+    <article class="card" itemscope itemtype="http://schema.org/Product">
+      <meta itemprop="sku" content="GS-JEERA1KG">
       <div class="media">
-        <img src="https://i.ibb.co/xScLcQsY/Screenshot-20251104-005356.png" alt="Cumin Jeera 1kg">
+        <img itemprop="image" src="https://i.ibb.co/xScLcQsY/Screenshot-20251104-005356.png" alt="Cumin Jeera 1kg">
       </div>
       <div class="body">
-        <div class="small">Cumin (Jeera) — 1 kg</div>
-        <div class="price">₹320</div>
+        <div class="small" itemprop="name">Cumin (Jeera) — 1 kg</div>
+        <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+            <div class="price">
+                <span itemprop="priceCurrency" content="INR">₹</span>
+                <span itemprop="price" content="320">320</span>
+            </div>
+            <meta itemprop="availability" content="http://schema.org/InStock" />
+        </div>
         <div class="bold-note">Best quality Jeera</div>
         <div class="small" style="margin-top:6px">Free delivery under 10 km radius</div>
         <a class="btn" href="#" onclick="orderWhatsApp('Cumin Jeera 1kg',320)">Buy on WhatsApp</a>
       </div>
     </article>
 
-    <article class="card">
-      <div class="media"><img src="https://i.ibb.co/bMwXNx1x/Screenshot-20251107-083748.png" alt="Ajwain - 500 g"></div>
+    <article class="card" itemscope itemtype="http://schema.org/Product">
+      <meta itemprop="sku" content="GS-AJWAIN500G">
+      <div class="media"><img itemprop="image" src="https://i.ibb.co/bMwXNx1x/Screenshot-20251107-083748.png" alt="Ajwain - 500 g"></div>
         <div class="body">
-        <div class="small"> Ajwain - 500 g</div>
-          <div class="price">₹120</div>
+        <div class="small" itemprop="name"> Ajwain - 500 g</div>
+          <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+              <div class="price">
+                  <span itemprop="priceCurrency" content="INR">₹</span>
+                  <span itemprop="price" content="120">120</span>
+              </div>
+              <meta itemprop="availability" content="http://schema.org/InStock" />
+          </div>
           <div class="bold-note">Best quality Ajwain</div>
           <div class="small" style="margin-top:6px">Delivery charges depend on location</div>
           <a class="btn" href="#" onclick="orderWhatsApp('Ajwain 500g',120)">Buy on WhatsApp</a>
       </div>
     </article>
 
-        <article class="card">
+    <article class="card" itemscope itemtype="http://schema.org/Product">
+      <meta itemprop="sku" content="GS-KALIMIRCH100G">
       <div class="media">
-        <img src="https://i.ibb.co/S4H2ZTyG/Screenshot-20251107-081713.png"  alt="Kali mirch 100g">
+        <img itemprop="image" src="https://i.ibb.co/S4H2ZTyG/Screenshot-20251107-081713.png"  alt="Kali mirch 100g">
       </div>
       <div class="body">
-        <div class="small">Kali mirch (Black pepper) —100 g</div>
-        <div class="price">₹90</div>
+        <div class="small" itemprop="name">Kali mirch (Black pepper) —100 g</div>
+        <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+            <div class="price">
+                <span itemprop="priceCurrency" content="INR">₹</span>
+                <span itemprop="price" content="90">90</span>
+            </div>
+            <meta itemprop="availability" content="http://schema.org/InStock" />
+        </div>
         <div class="bold-note">Best quality Kali mirch</div>
         <div class="small" style="margin-top:6px">Free delivery under 10 km radius</div>
         <a class="btn" href="#" onclick="orderWhatsApp('Cumin Jeera 100g',90)">Buy on WhatsApp</a>
       </div>
-        </article>
+    </article>
 
-    <article class="card">
-      <div class="media"><img src="https://i.ibb.co/YFzrcc3n/Screenshot-20251105-230113.png" alt="Jeera (cumin) - 200 g"></div>
+    <article class="card" itemscope itemtype="http://schema.org/Product">
+      <meta itemprop="sku" content="GS-JEERA200G">
+      <div class="media"><img itemprop="image" src="https://i.ibb.co/YFzrcc3n/Screenshot-20251105-230113.png" alt="Jeera (cumin) - 200 g"></div>
         <div class="body">
-        <div class="small"> Jeera (cumin) - 200 g</div>
-          <div class="price">₹70</div>
+        <div class="small" itemprop="name"> Jeera (cumin) - 200 g</div>
+          <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+              <div class="price">
+                  <span itemprop="priceCurrency" content="INR">₹</span>
+                  <span itemprop="price" content="70">70</span>
+              </div>
+              <meta itemprop="availability" content="http://schema.org/InStock" />
+          </div>
           <div class="bold-note">Best quality Jeera</div>
           <div class="small" style="margin-top:6px">Delivery charges depend on location</div>
           <a class="btn" href="#" onclick="orderWhatsApp('Jeera (cumin) 200g',70)">Buy on WhatsApp</a>
       </div>
     </article>
 
-    <article class="card">
-      <div class="media"><img src="https://i.ibb.co/dwKQQFPR/Screenshot-20251104-001829.png" alt="Garam masala - 50 g"></div>
+    <article class="card" itemscope itemtype="http://schema.org/Product">
+      <meta itemprop="sku" content="GS-GARAMMAS50G">
+      <div class="media"><img itemprop="image" src="https://i.ibb.co/dwKQQFPR/Screenshot-20251104-001829.png" alt="Garam masala - 50 g"></div>
         <div class="body">
-        <div class="small">Garam masala - 50 g</div>
-          <div class="price">₹70</div>
+        <div class="small" itemprop="name">Garam masala - 50 g</div>
+          <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+              <div class="price">
+                  <span itemprop="priceCurrency" content="INR">₹</span>
+                  <span itemprop="price" content="70">70</span>
+              </div>
+              <meta itemprop="availability" content="http://schema.org/InStock" />
+          </div>
           <div class="bold-note">Premium Quality Spices</div>
           <div class="small" style="margin-top:6px">Delivery charges depend on location</div>
           <a class="btn" href="#" onclick="orderWhatsApp('Garam masala 50g',70)">Buy on WhatsApp</a>
       </div>
     </article>
 
-    <article class="card">
-      <div class="media"><img src="https://i.ibb.co/8DBLRJ8h/Screenshot-20251103-122559.png" alt="Besan 250g"></div>
+    <article class="card" itemscope itemtype="http://schema.org/Product">
+      <meta itemprop="sku" content="GS-BESAN250G">
+      <div class="media"><img itemprop="image" src="https://i.ibb.co/8DBLRJ8h/Screenshot-20251103-122559.png" alt="Besan 250g"></div>
       <div class="body">
-        <div class="small">Besan — 250 g</div>
-        <div class="price">₹40</div>
+        <div class="small" itemprop="name">Besan — 250 g</div>
+        <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+            <div class="price">
+                <span itemprop="priceCurrency" content="INR">₹</span>
+                <span itemprop="price" content="40">40</span>
+            </div>
+            <meta itemprop="availability" content="http://schema.org/InStock" />
+        </div>
         <div class="bold-note">Excellent Taste & Quality</div>
         <div class="small" style="margin-top:6px">Delivery charges depend on location</div>
         <a class="btn" href="#" onclick="orderWhatsApp('Besan 250g',40)">Buy on WhatsApp</a>
       </div>
     </article>
 
-    <article class="card">
-      <div class="media"><img src="https://i.ibb.co/7N1bZn4h/Screenshot-20251106-063808.png" alt="Horlicks 500g jar"></div>
+    <article class="card" itemscope itemtype="http://schema.org/Product">
+      <meta itemprop="sku" content="GS-HORLICKS500G">
+      <div class="media"><img itemprop="image" src="https://i.ibb.co/7N1bZn4h/Screenshot-20251106-063808.png" alt="Horlicks 500g jar"></div>
         <div class="body">
-        <div class="small"> Horlicks 500g jar</div>
-          <div class="price">₹260</div>
+        <div class="small" itemprop="name"> Horlicks 500g jar</div>
+          <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+              <div class="price">
+                  <span itemprop="priceCurrency" content="INR">₹</span>
+                  <span itemprop="price" content="260">260</span>
+              </div>
+              <meta itemprop="availability" content="http://schema.org/InStock" />
+          </div>
           <div class="bold-note">Health Drink</div>
           <div class="small" style="margin-top:6px">Delivery charges depend on location</div>
           <a class="btn" href="#" onclick="orderWhatsApp('Horlicks 500g',260)">Buy on WhatsApp</a>
       </div>
     </article>
 
-    <article class="card">
-      <div class="media"><img src="https://i.ibb.co/sdXqLp1T/20251104-223036-COLLAGE.jpg" alt="Sev - 800g"></div>
+    <article class="card" itemscope itemtype="http://schema.org/Product">
+      <meta itemprop="sku" content="GS-SEV800G">
+      <div class="media"><img itemprop="image" src="https://i.ibb.co/sdXqLp1T/20251104-223036-COLLAGE.jpg" alt="Sev - 800g"></div>
         <div class="body">
-        <div class="small"> Sev - 800g</div>
-          <div class="price">₹120</div>
+        <div class="small" itemprop="name"> Sev - 800g</div>
+          <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+              <div class="price">
+                  <span itemprop="priceCurrency" content="INR">₹</span>
+                  <span itemprop="price" content="120">120</span>
+              </div>
+              <meta itemprop="availability" content="http://schema.org/InStock" />
+          </div>
           <div class="bold-note">Snacks & Namkeen</div>
           <div class="small" style="margin-top:6px">Delivery charges depend on location</div>
           <a class="btn" href="#" onclick="orderWhatsApp('Sev 800g',120)">Buy on WhatsApp</a>
       </div>
     </article>
 
-    <article class="card">
-      <div class="media"><img src="https://i.ibb.co/sv0Lw9m8/Screenshot-20251107-083041.png" alt="Sonpapdi 450g"></div>
+    <article class="card" itemscope itemtype="http://schema.org/Product">
+      <meta itemprop="sku" content="GS-SONPAP450G">
+      <div class="media"><img itemprop="image" src="https://i.ibb.co/sv0Lw9m8/Screenshot-20251107-083041.png" alt="Sonpapdi 450g"></div>
         <div class="body">
-        <div class="small"> Sonpapdi 450g</div>
-          <div class="price">₹110</div>
+        <div class="small" itemprop="name"> Sonpapdi 450g</div>
+          <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+              <div class="price">
+                  <span itemprop="priceCurrency" content="INR">₹</span>
+                  <span itemprop="price" content="110">110</span>
+              </div>
+              <meta itemprop="availability" content="http://schema.org/InStock" />
+          </div>
           <div class="small" style="margin-top:6px">Delivery charges depend on location</div>
           <a class="btn" href="#" onclick="orderWhatsApp('Sonpapdi 450g',110)">Buy on WhatsApp</a>
       </div>
@@ -575,16 +775,23 @@ function searchProducts() {
 
     
 
-    <article class="card">
+    <article class="card" itemscope itemtype="http://schema.org/Product">
+      <meta itemprop="sku" content="GS-POLYTHENE200G">
       <div class="media">
-        <img src="https://i.ibb.co/SX8510rx/20251104-095102-COLLAGE.jpg" alt="Premium Black Polythene Bag">
+        <img itemprop="image" src="https://i.ibb.co/SX8510rx/20251104-095102-COLLAGE.jpg" alt="Premium Black Polythene Bag">
       </div>
       <div class="body">
-        <div class="small">Premium Black Polythene (2.5 kg Capacity) — 200g</div>
-        <div class="price">₹55</div>
+        <div class="small" itemprop="name">Premium Black Polythene (2.5 kg Capacity) — 200g</div>
+        <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+            <div class="price">
+                <span itemprop="priceCurrency" content="INR">₹</span>
+                <span itemprop="price" content="50">50</span>
+            </div>
+            <meta itemprop="availability" content="http://schema.org/InStock" />
+        </div>
         <div class="bold-note">Premium Quality, Durable Material</div>
         <div class="small" style="margin-top:6px">Delivery charges depend on location</div>
-        <a class="btn" href="#" onclick="orderWhatsApp('Black polythene 200g ', 55)">Buy on WhatsApp</a>
+        <a class="btn" href="#" onclick="orderWhatsApp('Black polythene 200g ', 50)">Buy on WhatsApp</a>
       </div>
     </article>
 
@@ -631,7 +838,7 @@ function searchProducts() {
 
 <footer>  
  
-  © 2025 GAURAV STORE  
+  © 2025 GAURAV STORE (Paliganj, Patna)
 </footer>
 
   </div>    <script>  
@@ -723,6 +930,7 @@ function searchProducts() {
     renderReviews();  
   </script>  </body>  
 </html>
+
 
 
 
